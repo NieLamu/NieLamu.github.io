@@ -107,7 +107,7 @@ Following the guide in [Setting up a custom subdomain
 Follow your DNS provider's instructions to create a `CNAME` record that points your subdomain to your default pages domain. 
 For example, if you own the subdomain `www.example.com`, you can configure a `CNAME` record to point `www.example.com` to `YOUR-GITHUB-USERNAME.github.io`. 
 DNS changes can take over a full day to update, and the wait varies among DNS and hosting providers.
-![Set up Domain in DSP](Set up Domain in DSP.png)
+![Set up DNS in DSP](Set up DNS in DSP.png)
 
 ### Set up Custom Domain in Repo
 On GitHub, navigate to your GitHub Pages site's repository.
