@@ -156,5 +156,5 @@ npx hexo clean && npx hexo g -d
 ```
 
 ### images
-![avatar](img_test.png)
+![img_test](img_test.png)
 

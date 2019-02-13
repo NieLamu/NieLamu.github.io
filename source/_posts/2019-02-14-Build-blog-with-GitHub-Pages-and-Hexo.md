@@ -10,13 +10,21 @@ tags:
 date: 2019-02-14 00:53:27
 ---
 
-## Create a new github repository
- NieLamu.github.io
-## Initialize a Hexo project
+It's a fully procedure on how to build a static blog with GitHub Pages and Hexo.
+
+## Prepare a working project
+
+### Create a new repository on GitHub
+**Remember to replace `NieLamu` with your username on GitHub in the following codes.**
+The name of the repository must be similar to `NieLamu.github.io`.
+![Create New GitHub Pages Repo](Create New GitHub Pages Repo.png)
+
+### Initialize a local Hexo project
 ```bash
 npx hexo init NieLamu.github.io
 ```
-## Relate github repository with local Hexo project
+
+### Relate GitHub repository with local Hexo project
 
 ```bash
 cd NieLamu.github.io/
@@ -24,37 +32,34 @@ git init
 git remote add origin https://github.com/NieLamu/NieLamu.github.io
 ```
 
-## Push working branch to remote
+### Fork and customize a Hexo theme
+
+Fork [Material-T](https://github.com/invom/Material-T), then
+```bash
+git submodule add https://github.com/NieLamu/Material-T themes/Material-T
+```
+
+### Push working branch with submodule to remote
 ```bash
 git checkout -b develop
 git add .
-git commit -m "hexo init"
+git commit -m "hexo init project with submodule"
 git push origin develop
 ```
 
-## Fork and customize a Hexo theme
-https://github.com/invom/Material-T
-
+### Modify theme 
 ```bash
-git submodule add https://github.com/NieLamu/Material-T themes/Material-T
 cd themes/Material-T/
-some modifies...
+...some modifies...
 git add .
 git commit -m "modify css and config"
 git push origin master
 ```
 
-## Commit with submodule
-```bash
-cd ../../
-git add .
-λ git commit -m "commit with submodule"
-λ git push origin develop
-```
 
 ## generate and deploy website
-_config.yml
 
+### Modify `_config.yml`
 ```
 deploy:
   type: git
@@ -62,7 +67,60 @@ deploy:
   branch: master
 ```
 
+### Install git deploy module
 ```bash
 npm install hexo-deployer-git --save
-λ npx hexo clean && npx hexo g && npx hexo d -m "update message"
 ```
+
+### Clean, generate and deploy
+```bash
+npx hexo clean && npx hexo g && npx hexo d -m "update message"
+```
+Or
+```bash
+npx hexo clean
+npx hexo g
+npx hexo d -m "update message"
+```
+
+### Serve
+```bash
+npx hexo clean && npx hexo g && npx hexo serve
+```
+Or
+```bash
+npx hexo serve
+```
+
+### Push working branch to remote
+```bash
+git add .
+git commit -m "modify css and config"
+git push origin develop
+```
+
+## Setting up a custom subdomain
+Following the guide in [Setting up a custom subdomain
+](https://help.github.com/articles/setting-up-a-custom-subdomain/).
+
+### Set up Domain in DSP
+Follow your DNS provider's instructions to create a `CNAME` record that points your subdomain to your default pages domain. 
+For example, if you own the subdomain `www.example.com`, you can configure a `CNAME` record to point `www.example.com` to `YOUR-GITHUB-USERNAME.github.io`. 
+DNS changes can take over a full day to update, and the wait varies among DNS and hosting providers.
+![Set up Domain in DSP](Set up Domain in DSP.png)
+
+### Set up Custom Domain in Repo
+On GitHub, navigate to your GitHub Pages site's repository.
+Under your repository name, click Settings.
+Under "Custom domain," add your custom domain and click Save.
+![Set up Custom Domain in Repo](Set up Custom Domain in Repo.png)
+
+### Create CNAME file
+Create a file named `CNAME` in `source` folder with `YOUR-GITHUB-USERNAME.github.io` as content.
+```bash
+echo "blog.renxiaoyao.xyz" > source/CNAME
+```
+
+Or you can following [Using a custom domain with GitHub Pages
+](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) to set up other types of domain.
+
