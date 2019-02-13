@@ -1,13 +1,14 @@
 ---
 title: Hello World
-index_img: http://ww1.sinaimg.cn/large/d40b6c29gy1fvrkstcm7ej20ei0c1aah.jpg
-#banner_img: http://ww1.sinaimg.cn/large/d40b6c29gy1fvrkstdifaj210s0gfjrz.jpg
+date: 2019-02-12 00:41:42
+index_img: https://github.com/NieLamu/NieLamu.github.io/raw/master/img/post-banner.jpg
+banner_img: https://images.unsplash.com/photo-1549943437-0f0686490788?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
 categories:
-- [default, Hexo]
-- [Hello World, Hexo]
+  - [default, Hexo]
+  - [Hello World, Hexo]
 tags:
-- default
-- Hexo
+  - default
+  - Hexo
 ---
 
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. 
@@ -153,3 +154,7 @@ npx hexo clean && npx hexo g -d
   position: absolute;
 }
 ```
+
+### images
+![avatar](new GitHub Pages Repo.png)
+
