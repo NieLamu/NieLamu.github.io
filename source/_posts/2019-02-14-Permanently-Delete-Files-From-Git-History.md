@@ -36,11 +36,11 @@ WARNING: Ref 'refs/heads/master' is unchanged
 
 Compulsively push the changes to remote.
 ```bash
-git push -u origin master --force
+git push origin master --force
 ```
 Push Git tags.
 ```bash
-git push origin master --force --tags
+git push origin --tags --force
 ```
 
 ## Clean-up and recovery space
