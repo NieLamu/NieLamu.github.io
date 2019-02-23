@@ -5,6 +5,6 @@
 
 ```bash
 npx hexo clean && npx hexo g
-npx hexo serve
+npx hexo serve --draft
 npx hexo d -m ""
 ```
