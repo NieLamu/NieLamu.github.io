@@ -58,7 +58,7 @@ npx hexo clean && npx hexo g -d
 
 ## This is some test
 
-**Important: if you want to run app with gulped code run `npm run build` or `gulp`, then run `npm start`.
+**Important: if you want to run app with gulped code run `npm run build` or `gulp`, then run `npm start`.**
 
 ### JavaScript
 

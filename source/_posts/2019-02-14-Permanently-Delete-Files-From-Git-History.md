@@ -19,7 +19,7 @@ git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch path-
 ```
 
 `path-to-your-remove-file` is the relative path of the file you want to clear.
-**Do not let the path start with '/' which will make it be considered to be in the install dir of Git.  
+**Do not let the path start with '/' which will make it be considered to be in the install dir of Git.**
 If you want to clear a directory, add `-r` after `git rm --cached`.
 
 The following message is successfull info.

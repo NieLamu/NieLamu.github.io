@@ -1,7 +1,7 @@
 ---
 title: test
 categories:
-  - - default
+  - [default]
 tags:
   - default
 ---
