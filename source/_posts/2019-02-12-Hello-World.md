@@ -7,7 +7,6 @@ categories:
   - [default, Hexo]
   - [Hello World, Hexo]
 tags:
-  - default
   - Hexo
 ---
 

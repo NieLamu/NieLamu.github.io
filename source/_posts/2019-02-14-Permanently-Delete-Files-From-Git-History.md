@@ -3,7 +3,6 @@ title: Permanently Delete Files From Git History
 categories:
   - [Git]
 tags:
-  - default
   - Git
 date: 2019-02-14 11:28:26
 index_img: https://git-scm.com/images/branching-illustration@2x.png

@@ -3,7 +3,6 @@ title: Merge Two Branches From Two Git Projects
 categories:
   - [Git]
 tags:
-  - default
   - Git
 date: 2019-02-15 10:36:59
 ---

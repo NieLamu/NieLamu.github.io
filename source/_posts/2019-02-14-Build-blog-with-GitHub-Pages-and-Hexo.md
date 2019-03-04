@@ -5,7 +5,7 @@ banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img
 categories:
   - default
 tags:
-  - default
+  - GitHub
   - Hexo
 date: 2019-02-14 00:53:27
 ---
