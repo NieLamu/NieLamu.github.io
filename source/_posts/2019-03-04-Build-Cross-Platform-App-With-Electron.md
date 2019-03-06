@@ -5,13 +5,15 @@ categories:
 tags:
   - Electron
 date: 2019-03-04 00:22:15
+index_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/electron.png
+banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/electron.png
 ---
 
 # Problems
 
 ## Can not use jQuery/RequireJS/Meteor/AngularJS in Electron
-
-According to [Electron FAQ](https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron), you can use this:
+Electron
+According to [ FAQ](https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron), you can use this:
 ```html
 <head>
 <script>
