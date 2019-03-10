@@ -24,21 +24,26 @@ electron-builder配置项非常丰富，具体使用可查阅[官方文档](http
 ### nsis-web包类型(recommended)
 
 以目标平台为Windows为例，nsis-web形式包含一个几百kb的通用安装包(.exe)和x64、x86架构下相应的软件包(.7z)。
+
 如果安装包托管在网站上，分发时只需要分发exe文件。这样不仅无需考虑用户操作系统架构，而且安装包比32位+64位减少了一半的大小。
+
 ![electron-builder-nsis-web-installer](electron-builder-nsis-web-installer.png)
 
 #### package.json配置
 
 #### 配置scripts:
+
 ```json
 "scripts": {
   "release": "electron-builder"
 }
 ```
 *`electron-builder`后的参数参照[CLI Building参数](https://www.electron.build/cli)。*
+
 *如果安装包要自动上传到GitHub上，则script的必须命名为`release`。*
 
 #### 配置build参数：
+
 ```json
 "build": {
   "nsisWeb": {
@@ -63,7 +68,9 @@ electron-builder配置项非常丰富，具体使用可查阅[官方文档](http
   }
 }
 ```
+
 其中`nsisWeb`和`win.target.nsis-web`字段指定要打包为`nsisWeb`类型。
+
 `publish`字段，如果托管到GitHub，则
 * provider: "github"
 * repo: 托管的repository
@@ -74,12 +81,12 @@ electron-builder配置项非常丰富，具体使用可查阅[官方文档](http
 * provider: "generic"
 * url: "https://example.com/latest/"
 
-
 其余字段按需配置。
 
 #### 创建GH_TOKEN
 
 在`GitHub - Settings - Developer settings - Personal access tokens - Generate new token`创建一个新的token, 勾选scopes中的`repo`，生成并保存token到本地的可靠文件中。
+
 ![gh_token](gh_token.png)
 
 #### 打包及发布
@@ -92,7 +99,6 @@ electron-builder配置项非常丰富，具体使用可查阅[官方文档](http
 
 此后安装包将自动发布到GitHub项目的release。
 ![github_release](github_release.png)
-
 
 Refer:
 [electron-builder打包见解

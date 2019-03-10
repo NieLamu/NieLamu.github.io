@@ -18,15 +18,20 @@ git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch path-
 ```
 
 `path-to-your-remove-file` is the relative path of the file you want to clear.
+
 **Do not let the path start with '/' which will make it be considered to be in the install dir of Git.**
+
 If you want to clear a directory, add `-r` after `git rm --cached`.
 
 The following message is successfull info.
+
 ```
 Rewrite e9a2f6be143f4f743f72800821e92c4aa2da7a0d (15/16)
 Ref 'refs/heads/master' was rewritten
 ```
+
 Meanwhile the following message is NO SUCH FILE info.
+
 ```
 WARNING: Ref 'refs/heads/master' is unchanged
 ```
@@ -34,10 +39,13 @@ WARNING: Ref 'refs/heads/master' is unchanged
 ## Push changes
 
 Compulsively push the changes to remote.
+
 ```bash
 git push origin master --force
 ```
+
 Push Git tags.
+
 ```bash
 git push origin --tags --force
 ```
@@ -50,7 +58,6 @@ git reflog expire --expire=now --all
 git gc --prune=now
 git gc --aggressive --prune=now
 ```
-
 
 Refer:
 [Git如何永久删除文件(包括历史记录)](http://www.cnblogs.com/shines77/p/3460274.html)

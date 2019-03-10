@@ -9,7 +9,6 @@ index_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/
 banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/gitlab-logo.png
 ---
 
-
 Follow the instructions on [Omnibus package installation](https://about.gitlab.com/install/#ubuntu)
 
 # Install and configure the necessary dependencies
@@ -35,30 +34,41 @@ The edition names of Ubuntu like `bionic` are on [](https://launchpad.net/ubuntu
 # Modify GitLab configuration settings
 
 Configure a URL for your GitLab instance by setting `external_url` configuration in `/etc/gitlab/gitlab.rb file`.
+
 Then, you can start your GitLab instance by running `gitlab-ctl reconfigure`.
 
 ## Some errors
 
 The first time I ran this, it was fail and showed:
+
 ```
 Couldn't find an alternative telinit implementation to spawn.
 ```
+
 So I tried running the command again and after some messages, the process was blocked by:
+
 ```
 ruby_block[supervise_redis_sleep] action run
 ```
+
 Following [安装GitLab出现ruby_block[supervise_redis_sleep] action run](https://www.cnblogs.com/springwind2006/p/6872773.html), I tried:
+
 ```bash
 sudo systemctl restart gitlab-runsvdir
 ```
+
 But failed. It said:
+
 ```
 System has not been booted with systemd as init system (PID 1). Can't operate.
 ```
+
 According to [【WSL】Windows Subsystem for Linux 安裝及基本配置！](https://blogs.msdn.microsoft.com/microsoft_student_partners_in_taiwan/2017/10/03/wsltune/), that's because WSL doesn't support systemd.
 
 Tried run `/opt/gitlab/embedded/bin/runsvdir-start` in the background (another console) according to [WSL (Windows Subsystem for Linux) findings](https://gitlab.com/gitlab-org/omnibus-gitlab/issues/2295).
+
 Then：
+
 ```bash
 gitlab-ctl reconfigure
 gitlab-ctl restart
@@ -69,6 +79,7 @@ But when visited `127.0.0.1`, it showed `502 Whoops, GitLab is taking too much t
 After alot of searching, I quit.
 
 # Uninstall GitLab.
+
 ```bash
 sudo gitlab-ctl stop
 find / -name gitlab | xargs rm -rf
@@ -77,4 +88,4 @@ dpkg --get-selections | grep gitlab
 sudo apt-get --purge remove gitlab-ce
 ```
 
-
+All things GOOD.
