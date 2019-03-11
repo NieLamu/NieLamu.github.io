@@ -5,7 +5,6 @@ categories:
 tags:
   - GitLab
 date: 2019-02-21 09:47:15
-index_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/gitlab-logo.png
 banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/gitlab-logo.png
 ---
 

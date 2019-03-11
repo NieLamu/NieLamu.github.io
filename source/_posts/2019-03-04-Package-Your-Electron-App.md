@@ -5,7 +5,6 @@ categories:
 tags:
   - Electron
 date: 2019-03-04 00:23:45
-index_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/electron-app.png
 banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/electron-app.png
 ---
 

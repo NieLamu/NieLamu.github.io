@@ -1,6 +1,5 @@
 ---
 title: Build blog with GitHub Pages and Hexo
-index_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/GitHub%20Pages.png
 banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/GitHub%20Pages.png
 categories:
   - default

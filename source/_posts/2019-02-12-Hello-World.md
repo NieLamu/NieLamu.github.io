@@ -1,7 +1,6 @@
 ---
 title: Hello World
 date: 2019-02-12 11:41:42
-index_img: /img/post-banner.jpg
 banner_img: https://images.unsplash.com/photo-1549943437-0f0686490788?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
 categories:
   - [default, Hexo]

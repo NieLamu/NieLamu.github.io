@@ -5,7 +5,6 @@ categories:
 tags:
   - Git
 date: 2019-02-14 11:28:26
-index_img: https://git-scm.com/images/branching-illustration@2x.png
 banner_img: https://git-scm.com/images/branching-illustration@2x.png
 ---
 
