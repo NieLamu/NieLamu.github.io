@@ -10,14 +10,14 @@ banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img
 
 Follow the instructions on [Omnibus package installation](https://about.gitlab.com/install/#ubuntu)
 
-# Install and configure the necessary dependencies
+## Install and configure the necessary dependencies
 
 ```bash
 sudo apt-get update
 sudo apt-get install -y curl openssh-server ca-certificates
 ```
 
-# Add the GitLab package repository and install the package
+## Add the GitLab package repository and install the package
 
 This step, we use the mirrors of [TUNA](https://mirror.tuna.tsinghua.edu.cn), follow the instructions on [Gitlab Community Edition 镜像使用帮助](https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/)
 
@@ -30,7 +30,7 @@ sudo apt-get install gitlab-ce
 
 The edition names of Ubuntu like `bionic` are on [](https://launchpad.net/ubuntu).
 
-# Modify GitLab configuration settings
+## Modify GitLab configuration settings
 
 Configure a URL for your GitLab instance by setting `external_url` configuration in `/etc/gitlab/gitlab.rb file`.
 
@@ -77,7 +77,7 @@ But when visited `127.0.0.1`, it showed `502 Whoops, GitLab is taking too much t
 
 After alot of searching, I quit.
 
-# Uninstall GitLab.
+## Uninstall GitLab.
 
 ```bash
 sudo gitlab-ctl stop

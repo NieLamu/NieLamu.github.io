@@ -8,9 +8,9 @@ date: 2019-03-04 00:22:15
 banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/electron.png
 ---
 
-# Problems
+## Problems
 
-## Can not use jQuery/RequireJS/Meteor/AngularJS in Electron
+### Can not use jQuery/RequireJS/Meteor/AngularJS in Electron
 
 Electron
 According to [ FAQ](https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron), you can use this:
@@ -29,7 +29,7 @@ delete window.module;
 
 ***In fact, it seems that `require` can still be used.***
 
-## Install Electron blocked by internet connection
+### Install Electron blocked by internet connection
 
 In China, the installation process of electron may be blocked by the awful internet connection sometimes.
 
@@ -37,7 +37,7 @@ We can download the Electron package we need like `electron-v4.0.6-win32-x64.zip
 
 Then we can run `npm install` like before.
 
-## Download dependencies failed when package App with electron-builder
+### Download dependencies failed when package App with electron-builder
 
 When we run `electron-builder` to package our App first time, the subprocess downloading Electron like `electron-v4.0.6-win32-x64.zip` may fail due to the awful network.
 

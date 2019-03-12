@@ -49,6 +49,11 @@ highlight:
   line_number: false
   auto_detect: false
   tab_replace:
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess 
+  theme: 'tomorrow'
+  line_number: true    # default false 
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
