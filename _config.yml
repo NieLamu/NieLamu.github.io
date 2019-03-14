@@ -11,7 +11,7 @@ author: NieLamu
 language: 
 timezone:
 avatar:
-  url: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/avatar.jpg
+  url: /img/avatar.jpg
   desc: NOT ME
 
 # URL
