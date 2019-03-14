@@ -79,56 +79,12 @@ npx hexo clean && npx hexo g -d
       console.log(`your multiDataLen ${data.length} is not multiple of frameLen ${frameLen}`, multiData);
       throw 'length of multiData must be multiple of frameLen';
     }
-    let plotData = {};
-    for (let i=0; i<frameNum; i++){ // 1个frame
-      for (let j=0; j<realLeadersName.length; j++){ // 1个导
-        const leader = realLeadersName[j];
-        if (!plotData[leader]) plotData[leader] = []; // 初始化
-        const start = i*frameLen+j*bytes;
-        const end = i*frameLen+(j+1)*bytes;
-        const arr = data.slice(start, end);
-        const value = arr.readUIntBE(0, bytes);
-        plotData[leader].push(value);
-      }
-
-      plotLeadersName.forEach((leader, index)=>{
-        if (!realLeadersName.includes(leader)){ // 要算
-          if (!plotData[leader]) plotData[leader] = []; // 初始化
-          let value;
-          switch (leader) {
-            case 'I':
-              value = plotData['II'][i] - plotData['III'][i];
-              plotData[leader].push(value);
-              break;
-            case 'II':
-              value = plotData['I'][i] + plotData['III'][i];
-              plotData[leader].push(value);
-              break;
-            case 'III':
-              value = plotData['II'][i] - plotData['I='][i];
-              plotData[leader].push(value);
-              break;
-            case 'aVF':
-              value = plotData['II'][i] - plotData['I'][i]/2;
-              plotData[leader].push(value);
-              break;
-            case 'aVR':
-              value = -(plotData['I'][i] + plotData['II'][i])/2;
-              plotData[leader].push(value);
-              break;
-            case 'aVL':
-              value = plotData['I'][i] - plotData['II'][i]/2;
-              plotData[leader].push(value);
-              break;
-          }
-        }
-      })
-    }
+  }
 ```
 
 ### Html
 
-```
+```html
 <!--插图-->
 <div class="healthyEcgCanvas" data-tap-disabled="true">
 	<canvas width=3200 height=400 id="healthyEcgCanvasBackground"></canvas>
@@ -138,7 +94,7 @@ npx hexo clean && npx hexo g -d
 
 ### CSS
 
-```
+```css
 //ecg的图们
 .healthyEcgCanvas{
   position: relative;
