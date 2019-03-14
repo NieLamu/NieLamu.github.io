@@ -5,7 +5,7 @@ categories:
 tags:
   - GitLab
 date: 2019-02-21 09:47:15
-banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/gitlab-logo.png
+banner_img: /img/gitlab-logo.png
 ---
 
 Follow the instructions on [Omnibus package installation](https://about.gitlab.com/install/#ubuntu)

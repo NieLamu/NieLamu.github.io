@@ -5,7 +5,7 @@ categories:
 tags:
   - Electron
 date: 2019-03-04 00:23:45
-banner_img: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/electron-app.png
+banner_img: /img/electron-app.png
 ---
 
 使用Electron开发跨平台项目，将其打包成各平台可执行或可安装应用，一般有两种模块可以完成，即[electron-packager](https://github.com/electron-userland/electron-packager)和[electron-builder](https://github.com/electron-userland/electron-builder)，建议使用electron-builder。

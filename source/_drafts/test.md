@@ -6,9 +6,9 @@ tags:
   - default
 ---
 
-# Markdown Syntax
+## Markdown Syntax
 
-## HTML Elements
+### HTML Elements
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
@@ -24,7 +24,7 @@ Below is just about everything you'll need to style in the theme. Check the sour
 
 ###### Heading 6
 
-### Body text
+#### Body text
 
 Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam.
 
@@ -33,13 +33,13 @@ Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nulla
 
 HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.
 
-### Blockquotes
+#### Blockquotes
 
 > Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
 
-## List Types
+### List Types
 
-### Ordered Lists
+#### Ordered Lists
 
 1. Item one
    1. sub item one
@@ -47,13 +47,13 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
    3. sub item three
 2. Item two
 
-### Unordered Lists
+#### Unordered Lists
 
 * Item one
 * Item two
 * Item three
 
-## Buttons
+### Buttons
 
 Make any link standout more when applying the `.btn` class.
 
@@ -65,7 +65,7 @@ Make any link standout more when applying the `.btn` class.
 <a href="#" class="btn btn-danger">Danger Button</a>
 <a href="#" class="btn btn-info">Info Button</a>
 
-## KBD
+### KBD
 
 You can also use `<kbd>` tag for keyboard buttons.
 
@@ -74,7 +74,7 @@ You can also use `<kbd>` tag for keyboard buttons.
 
 Press <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move your car. **Midtown Maddness!!**
 
-## Notices
+### Notices
 
 **Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
 
