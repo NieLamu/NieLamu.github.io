@@ -5,7 +5,7 @@ categories:
 tags:
   - Git
 date: 2019-02-14 11:28:26
-banner_img: https://git-scm.com/images/branching-illustration@2x.png
+banner_img: /img/branching-illustration@2x.png
 ---
 
 Sometimes we mistakenly commit large files or files that contain passwords, so we need permanently delete files from Git history.
