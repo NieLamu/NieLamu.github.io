@@ -8,7 +8,7 @@ subtitle: NieLamu's Blog
 description: はじめまして ^_^
 keywords: Blog JavaScript Python
 author: NieLamu
-language: 
+language: en
 timezone:
 avatar:
   url: /img/avatar.jpg
@@ -85,6 +85,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: Material-T
+# theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

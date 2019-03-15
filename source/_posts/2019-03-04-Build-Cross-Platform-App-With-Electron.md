@@ -43,3 +43,8 @@ When we run `electron-builder` to package our App first time, the subprocess dow
 
 Download Electron package from [the mirror of Electron in China](https://npm.taobao.org/mirrors/electron/) and put it in `C:\Users\yourName\AppData\Local\electron\Cache\`, then run the command like before.
 If the dependence is `nsis`, download the package from the link show on screen and put the folder unpacked in `C:\Users\yourName\AppData\Local\electron-builder\cache\nsis\`.
+
+----
+
+Related:
+[Electron应用打包](/2019/03/04/Package-Your-Electron-App/)
