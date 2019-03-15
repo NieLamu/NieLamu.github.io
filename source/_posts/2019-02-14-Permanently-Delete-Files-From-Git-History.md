@@ -58,6 +58,8 @@ git gc --prune=now
 git gc --aggressive --prune=now
 ```
 
+----
+
 Refer:
-[Git如何永久删除文件(包括历史记录)](http://www.cnblogs.com/shines77/p/3460274.html)
-[彻底删除 Git 仓库中的文件避免占用大量磁盘空间](https://walterlv.oschina.io/git/2017/09/18/delete-a-file-from-whole-git-history.html)
+[1][Git如何永久删除文件(包括历史记录)](http://www.cnblogs.com/shines77/p/3460274.html)
+[2][彻底删除 Git 仓库中的文件避免占用大量磁盘空间](https://walterlv.oschina.io/git/2017/09/18/delete-a-file-from-whole-git-history.html)

@@ -26,3 +26,6 @@ Computer Engine相当于阿里云的ECS，也就是虚拟机（服务器），�
 
 ![choose-os](choose-os.jpg)
 
+----
+
+Refer:

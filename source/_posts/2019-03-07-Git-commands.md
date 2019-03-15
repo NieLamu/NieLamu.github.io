@@ -5,6 +5,7 @@ categories:
 tags:
   - Git
 date: 2019-03-07 15:25:59
+banner_img: /img/branching-illustration@2x.png
 ---
 
 ## 配置/config
@@ -111,7 +112,10 @@ git reset commitId
 git reset --hard commitId
 ```
 
+## Git 命令速查表<sup>[1]</sup>
 {% pdf "Git 命令速查表v2.pdf" %}
 
+----
+
 Refer:
-[⽅糖⼩⽩课·版本管理和Git⼊⻔](http://suiji.io)
+[1][⽅糖⼩⽩课·版本管理和Git⼊⻔.Git 命令速查表](http://suiji.io)

@@ -99,7 +99,9 @@ electron-builder配置项非常丰富，具体使用可查阅[官方文档](http
 此后安装包将自动发布到GitHub项目的release。
 ![github_release](github_release.png)
 
+----
+
 Refer:
-[electron-builder打包见解
+[1][electron-builder打包见解
 ](https://juejin.im/post/5bc53aade51d453df0447927)
-[Electron Nsis Web 安装包配置方法](https://www.luffysama.com/2018/09/08/electron-nsis-web/)
+[2][Electron Nsis Web 安装包配置方法](https://www.luffysama.com/2018/09/08/electron-nsis-web/)

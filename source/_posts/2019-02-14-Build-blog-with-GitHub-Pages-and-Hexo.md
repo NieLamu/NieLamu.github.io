@@ -145,5 +145,8 @@ echo "blog.renxiaoyao.xyz" > source/CNAME
 Or you can following [Using a custom domain with GitHub Pages
 ](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) to set up other types of domain.
 
-refer: [hexo史上最全搭建教程
+----
+
+Refer:
+[1][hexo史上最全搭建教程
 ](https://blog.csdn.net/sinat_37781304/article/details/82729029)
