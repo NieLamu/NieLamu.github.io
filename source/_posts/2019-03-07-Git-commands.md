@@ -79,10 +79,22 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ### git commit之后/after git commit
 
-#### 只修改git commit message
+#### 修改git commit信息
 
 * 修改最后一次提交 `git commit --amend`
 * 修改多个提交说明`git rebase -i HEAD~3`
+
+修改git commit时间
+
+```bash
+# get now time
+date -R  
+# make commit_time following format of now time and commit
+git commit --amend  --date="commit_time"
+# or commit with now time
+git commit --amend --date="$(date -R)"
+git commit --amend --date=`date -R`
+```
 
 #### 撤回某个commit
 
@@ -112,10 +124,11 @@ git reset commitId
 git reset --hard commitId
 ```
 
-## Git 命令速查表<sup>[1]</sup>
+## Git 命令速查表<sup>[∞]</sup>
 {% pdf "Git 命令速查表v2.pdf" %}
 
 ----
 
 Refer:
-[1][⽅糖⼩⽩课·版本管理和Git⼊⻔.Git 命令速查表](http://suiji.io)
+[1][git 修改上次git commit的时间](https://blog.csdn.net/guoyajie1990/article/details/73824732)
+[∞][⽅糖⼩⽩课·版本管理和Git⼊⻔.Git 命令速查表](http://suiji.io)
