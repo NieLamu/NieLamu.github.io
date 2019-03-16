@@ -1,9 +1,9 @@
 ---
 title: test
 categories:
-  - [default]
+  - [Life]
 tags:
-  - default
+  - Life
 ---
 
 ## Markdown Syntax

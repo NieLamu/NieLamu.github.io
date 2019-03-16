@@ -1,11 +1,13 @@
 ---
-title: 在GCP上搭建v2ray服务 Build v2ray Server on GCP
+title: Build v2ray Server on GCP / 在GCP上搭建v2ray服务
 categories:
-  - [GCP, v2ray]
+  - [Programming, v2ray]
+  - [Programming, GCP]
 tags:
   - GCP
   - v2ray
 date: 2019-03-10 17:49:08
+banner_img: /img/google-cloud-logo.png
 ---
 
 截至2019年3月，[搬瓦工](https://bandwagonhost.com)的openVZ架构VPS全部下线，最低价$49.99/yr的服务器也卖光了。在vultr上为公司搭建的Shadowsocks服务又导致IP经常被封（正值x会期间），实在折腾不起，所以转投GCP(Google Cloud Platform)。

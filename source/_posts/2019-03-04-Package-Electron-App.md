@@ -1,7 +1,7 @@
 ---
-title: Electron应用打包
+title: Package-Electron-App / Electron应用打包
 categories:
-  - [Electron]
+  - [Programming, Electron]
 tags:
   - Electron
 date: 2019-03-04 00:23:45

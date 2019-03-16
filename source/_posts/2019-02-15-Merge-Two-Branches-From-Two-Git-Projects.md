@@ -1,10 +1,11 @@
 ---
 title: Merge Two Branches From Two Git Projects
 categories:
-  - [Git]
+  - [Programming, Git]
 tags:
   - Git
 date: 2019-02-15 10:36:59
+banner_img:
 ---
 
 We have one git project that references another project. After some commits, we want to fork the reference project and merge the commits of the two projects.

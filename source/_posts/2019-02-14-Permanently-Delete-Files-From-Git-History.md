@@ -1,7 +1,7 @@
 ---
 title: Permanently Delete Files From Git History
 categories:
-  - [Git]
+  - [Programming, Git]
 tags:
   - Git
 date: 2019-02-14 11:28:26

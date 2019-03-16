@@ -1,12 +1,12 @@
 ---
 title: Hello World
-date: 2019-02-12 11:41:42
-banner_img: https://source.unsplash.com/800x450/?snow
 categories:
-  - [default, Hexo]
-  - [Hello World, Hexo]
+  - [Programming, Hexo]
+  - [Hello World]
 tags:
   - Hexo
+date: 2019-02-12 11:41:42
+banner_img: https://source.unsplash.com/800x450/?snow
 ---
 
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. 
@@ -54,7 +54,7 @@ More info: [Deployment](https://hexo.io/docs/deployment.html)
 npx hexo clean && npx hexo g -d
 ```
 
-## This is some test
+## This are some tests
 
 **Important: if you want to run app with gulped code run `npm run build` or `gulp`, then run `npm start`.**
 
@@ -68,12 +68,7 @@ npx hexo clean && npx hexo g -d
    * @param {Number} lengthToPad 需要在前面补0的数量，默认为 `0`，即不补0。
    */
   function drawCanvasFromMultiData (canvas, multiData, lengthToPad=0){
-    const data = Buffer.from(multiData);
-    const bytes = win.xpRegisterConfig.sampleBits/8; // 3字节
-    const frameLen = win.xpRegisterConfig.frameLen; // 3字节*8导
-    const realLeadersName = win.xpRegisterConfig.realLeadersName;
-    const plotLeadersName = win.xpRegisterConfig.plotLeadersName;
-    const frameNum = data.length/frameLen; // 个数
+    const data = 
     const remainder = data.length%frameLen; // 余数0
     if (remainder!==0){
       console.log(`your multiDataLen ${data.length} is not multiple of frameLen ${frameLen}`, multiData);
@@ -101,12 +96,6 @@ npx hexo clean && npx hexo g -d
   border: 1px solid #c90000;
   pointer-events: none;//禁止点击
 }
-
-.healthyEcgCanvas>canvas{
-  width:100%;
-  height:100%;
-  position: absolute;
-}
 ```
 
 ### images
@@ -116,3 +105,4 @@ npx hexo clean && npx hexo g -d
 
 Refer:
 [1][Google](www.google.com)
+[2][Learning-Markdown (Markdown 入门参考)](http://xianbai.me/learn-md/article/extension/table.html)

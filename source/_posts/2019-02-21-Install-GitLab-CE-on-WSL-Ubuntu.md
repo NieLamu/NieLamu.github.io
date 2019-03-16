@@ -1,7 +1,7 @@
 ---
-title: Install GitLab CE on WSL Ubuntu(Failed)
+title: Install GitLab CE on WSL Ubuntu (Failed)
 categories:
-  - default
+  - [Programming, GitLab]
 tags:
   - GitLab
 date: 2019-02-21 09:47:15
@@ -87,4 +87,4 @@ dpkg --get-selections | grep gitlab
 sudo apt-get --purge remove gitlab-ce
 ```
 
-All things GOOD.
+Everything's quiet.

@@ -1,7 +1,7 @@
 ---
 title: Build Cross Platform App With Electron
 categories:
-  - [Electron]
+  - [Programming, Electron]
 tags:
   - Electron
 date: 2019-03-04 00:22:15

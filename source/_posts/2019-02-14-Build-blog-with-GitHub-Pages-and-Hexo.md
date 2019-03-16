@@ -1,12 +1,12 @@
 ---
-title: Build blog with GitHub Pages and Hexo
-banner_img: /img/GitHub%20Pages.png
+title: Build Blog with GitHub Pages and Hexo
 categories:
-  - default
+  - [Programming]
 tags:
   - GitHub
   - Hexo
 date: 2019-02-14 00:53:27
+banner_img: /img/GitHub%20Pages.png
 ---
 
 It's a fully procedure on how to build a static blog with GitHub Pages and Hexo.
