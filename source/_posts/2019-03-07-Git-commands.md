@@ -1,5 +1,5 @@
 ---
-title: Git Commands / Git相关命令
+title: Git Commands | Git相关命令
 categories:
   - [Programming, Git]
 tags:
@@ -8,13 +8,13 @@ date: 2019-03-07 15:25:59
 banner_img: /img/branching-illustration@2x.png
 ---
 
-## 配置 / config
+## 配置 | config
 
-## 撤销与回滚 / undo and rollback
+## 撤销与回滚 | undo and rollback
 
-### git commit之前 / before git commit
+### git commit之前 | before git commit
 
-#### git add之前 / before git add
+#### git add之前 | before git add
 
 也就是撤销工作区的更改。
 
@@ -43,7 +43,7 @@ Your branch is up to date with 'origin/develop'.
 nothing to commit, working tree clean
 ```
 
-####  git add之后 / after git add
+####  git add之后 | after git add
 
 也就是撤销暂存区的更改。
 
@@ -77,7 +77,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-### git commit之后 / after git commit
+### git commit之后 | after git commit
 
 #### 修改git commit信息
 

@@ -1,5 +1,5 @@
 ---
-title: Common Commands on Linux / Linux常用命令
+title: Common Commands on Linux | Linux常用命令
 categories:
   - [Programming, Linux]
 tags:

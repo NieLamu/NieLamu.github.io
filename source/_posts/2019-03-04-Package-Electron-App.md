@@ -1,5 +1,5 @@
 ---
-title: Package-Electron-App / Electron应用打包
+title: Package-Electron-App | Electron应用打包
 categories:
   - [Programming, Electron]
 tags:
