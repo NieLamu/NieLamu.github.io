@@ -5,6 +5,11 @@
   "hexo": {
     "version": "3.8.0"
   },
+  "scripts": {
+    "start": "npx hexo s --draft",
+    "g": "npx hexo clean && npx hexo g",
+    "d": "sh ./deploy.sh"
+  },
   "dependencies": {
     "hexo-deployer-git": "^1.0.0",
     "hexo-generator-archive": "^0.1.5",
