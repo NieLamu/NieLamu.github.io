@@ -212,6 +212,12 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
 <p>撤销commit（版本库），撤销暂存区，撤销工作区更改:</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> reset --hard commitId
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Case-problem"><a href="#Case-problem" class="headerlink" title="Case problem"></a>Case problem</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># disable ignore case</span>
+<span class="token function">git</span> config --global core.ignorecase <span class="token boolean">false</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>将文件/文件夹名称由<code>myFile</code>改为<code>myfile</code>，运行下面的命令后再push，否则remote仍然会存在修改之前的文件/文件夹。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">rm</span> -r --cached myFile
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="Git-命令速查表-∞"><a href="#Git-命令速查表-∞" class="headerlink" title="Git 命令速查表[∞]"></a>Git 命令速查表<sup>[∞]</sup></h2>
 
 	<div class="row">
