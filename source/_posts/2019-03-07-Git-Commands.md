@@ -124,6 +124,19 @@ git reset commitId
 git reset --hard commitId
 ```
 
+## Case problem
+
+```bash
+# disable ignore case
+git config --global core.ignorecase false
+```
+
+将文件/文件夹名称由`myFile`改为`myfile`，运行下面的命令后再push，否则remote仍然会存在修改之前的文件/文件夹。
+
+```bash
+$ git rm -r --cached myFile
+```
+
 ## Git 命令速查表<sup>[∞]</sup>
 {% pdf "Git 命令速查表v2.pdf" %}
 
