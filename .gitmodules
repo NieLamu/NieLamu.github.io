@@ -1,3 +1,6 @@
 [submodule "themes/Material-T"]
 	path = themes/Material-T
 	url = https://github.com/NieLamu/Material-T
+[submodule "themes/next"]
+	path = themes/next
+	url = https://github.com/theme-next/hexo-theme-next.git
