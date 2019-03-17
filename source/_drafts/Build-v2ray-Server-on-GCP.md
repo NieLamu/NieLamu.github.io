@@ -1,5 +1,5 @@
 ---
-title: Build v2ray Server on GCP | 在GCP上搭建v2ray服务
+title: Build V2ray Server on GCP | 在GCP上搭建v2ray服务
 categories:
   - [Programming, v2ray]
   - [Programming, GCP]
