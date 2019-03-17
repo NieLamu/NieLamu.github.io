@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.ico">
+    <meta name="description" content="はじめまして ^_^">
+    <meta name="author" content="NieLamu">
+    <meta name="keywords" content="Blog JavaScript Python">
+    <title>Permanently Delete Files From Git History ~ NieLamu</title>
+
+    <!--     Fonts and icons     -->
+    <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
+    <!-- Material Kit CSS -->
+    <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
+    <!-- MyFontsWebfontsKit -->
+    <link href="/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
+
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body class=" sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/">
+                <ion-icon name="ios-infinite"></ion-icon>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/archives/">
+                                    archives
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/">
+                                    about
+                                </a>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="Codes Page" href="https://github.com/NieLamu" target="_blank">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="INSTAGRAM" href="https://www.instagram.com/simadao/" target="_blank">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="TWITTER" href="https://twitter.com/mxmxlty2010" target="_blank">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="FACEBOOK" href="https://www.facebook.com/nielamu" target="_blank">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+    </div>
+</nav>
+    
+  
+  <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
+    <div class="page-header-content">
+      <div class="container">
+        <h1 class="title text-center post_title">Permanently Delete Files From Git History</h1>
+        <p class="text-center">
+          Created: <b>2019-02-14</b> |
+          Updated: <b>2019-03-17</b> |
+          Author: <b>NieLamu</b>
+        </p>
+        <p class="text-center">
+          
+            <a class="badge" href="/tags/Git">#Git</a>
+          
+          
+            <a class="badge" href="/categories/Programming">>Programming</a>
+          
+            <a class="badge" href="/categories/Git">>Git</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+  
+  <canvas id="post_img_canvas" style="display: none;"></canvas>
+
+    
+
+
+
+<div class="main main-raised">
+  <div class="container">
+    
+    <div class="section post_img_section">
+      <div class="post_banner_img_container">
+        <a style="background-image: url('/img/branching-illustration@2x.png');" href="/img/branching-illustration@2x.png" target="_blank" class="post_banner_img"></a> 
+      </div>
+    
+      <div class="row">
+        <div class="col-md-8 offset-md-1">
+          <div class="post_content">
+            <p>Sometimes we mistakenly commit large files or files that contain passwords, so we need permanently delete files from Git history.</p>
+<h2 id="Clear-wrong-files-from-your-working-directory"><a href="#Clear-wrong-files-from-your-working-directory" class="headerlink" title="Clear wrong files from your working directory"></a>Clear wrong files from your working directory</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> filter-branch --force --index-filter <span class="token string">'git rm --cached --ignore-unmatch path-to-your-remove-file'</span> --prune-empty --tag-name-filter <span class="token function">cat</span> -- --all
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>path-to-your-remove-file</code> is the relative path of the file you want to clear.</p>
+<p><strong>Do not let the path start with ‘/‘ which will make it be considered to be in the install dir of Git.</strong></p>
+<p>If you want to clear a directory, add <code>-r</code> after <code>git rm --cached</code>.</p>
+<p>The following message is successfull info.</p>
+<pre><code>Rewrite e9a2f6be143f4f743f72800821e92c4aa2da7a0d (15/16)
+Ref &#39;refs/heads/master&#39; was rewritten
+</code></pre><p>Meanwhile the following message is NO SUCH FILE info.</p>
+<pre><code>WARNING: Ref &#39;refs/heads/master&#39; is unchanged
+</code></pre><h2 id="Push-changes"><a href="#Push-changes" class="headerlink" title="Push changes"></a>Push changes</h2><p>Compulsively push the changes to remote.</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> push origin master --force
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Push Git tags.</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> push origin --tags --force
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Clean-up-and-recovery-space"><a href="#Clean-up-and-recovery-space" class="headerlink" title="Clean-up and recovery space"></a>Clean-up and recovery space</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">rm</span> -rf .git/refs/original/
+<span class="token function">git</span> reflog expire --expire<span class="token operator">=</span>now --all
+<span class="token function">git</span> gc --prune<span class="token operator">=</span>now
+<span class="token function">git</span> gc --aggressive --prune<span class="token operator">=</span>now
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<p>Refer:<br>[1]<a href="http://www.cnblogs.com/shines77/p/3460274.html" target="_blank" rel="noopener">Git如何永久删除文件(包括历史记录)</a><br>[2]<a href="https://walterlv.oschina.io/git/2017/09/18/delete-a-file-from-whole-git-history.html" target="_blank" rel="noopener">彻底删除 Git 仓库中的文件避免占用大量磁盘空间</a></p>
+
+          </div>
+        </div>
+        <!-- TOC -->
+        
+  <div id="toc">
+    <p class="toc-title"><ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC</p> 
+    <div id="tocbot"></div>
+  </div>
+  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
+  
+
+  <footer class="footer footer-default">
+  <div class="container">
+    <div class="float-left" style="padding: 15px 0;">
+        
+    </div>
+    <div class="copyright float-right">
+      &copy;
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X 
+      <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
+      <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="/js/core/popper.min.js" type="text/javascript"></script>
+<script src="/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="/js/core/material-kit.min.js?v=2.0.5" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+<link href="/css/main.css" rel="stylesheet">
+
+
+  <script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
+  <script src="/js/post.js"></script>
+  <link rel="stylesheet" href="/css/post.css">
+
+</body>
+
+</html>

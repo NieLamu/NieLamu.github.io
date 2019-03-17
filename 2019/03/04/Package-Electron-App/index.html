@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.ico">
+    <meta name="description" content="はじめまして ^_^">
+    <meta name="author" content="NieLamu">
+    <meta name="keywords" content="Blog JavaScript Python">
+    <title>Package-Electron-App | Electron应用打包 ~ NieLamu</title>
+
+    <!--     Fonts and icons     -->
+    <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
+    <!-- Material Kit CSS -->
+    <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
+    <!-- MyFontsWebfontsKit -->
+    <link href="/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
+
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body class=" sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/">
+                <ion-icon name="ios-infinite"></ion-icon>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/archives/">
+                                    archives
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/">
+                                    about
+                                </a>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="Codes Page" href="https://github.com/NieLamu" target="_blank">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="INSTAGRAM" href="https://www.instagram.com/simadao/" target="_blank">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="TWITTER" href="https://twitter.com/mxmxlty2010" target="_blank">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="FACEBOOK" href="https://www.facebook.com/nielamu" target="_blank">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+    </div>
+</nav>
+    
+  
+  <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
+    <div class="page-header-content">
+      <div class="container">
+        <h1 class="title text-center post_title">Package-Electron-App | Electron应用打包</h1>
+        <p class="text-center">
+          Created: <b>2019-03-04</b> |
+          Updated: <b>2019-03-17</b> |
+          Author: <b>NieLamu</b>
+        </p>
+        <p class="text-center">
+          
+            <a class="badge" href="/tags/Electron">#Electron</a>
+          
+          
+            <a class="badge" href="/categories/Programming">>Programming</a>
+          
+            <a class="badge" href="/categories/Electron">>Electron</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+  
+  <canvas id="post_img_canvas" style="display: none;"></canvas>
+
+    
+
+
+
+<div class="main main-raised">
+  <div class="container">
+    
+    <div class="section post_img_section">
+      <div class="post_banner_img_container">
+        <a style="background-image: url('/img/electron-app.png');" href="/img/electron-app.png" target="_blank" class="post_banner_img"></a> 
+      </div>
+    
+      <div class="row">
+        <div class="col-md-8 offset-md-1">
+          <div class="post_content">
+            <p>使用Electron开发跨平台项目，将其打包成各平台可执行或可安装应用，一般有两种模块可以完成，即<a href="https://github.com/electron-userland/electron-packager" target="_blank" rel="noopener">electron-packager</a>和<a href="https://github.com/electron-userland/electron-builder" target="_blank" rel="noopener">electron-builder</a>，建议使用electron-builder。</p>
+<h2 id="electron-packager"><a href="#electron-packager" class="headerlink" title="electron-packager"></a>electron-packager</h2><p>electron-packager的可配置项比较少，可打包类型也比较少。</p>
+<h2 id="electron-builder"><a href="#electron-builder" class="headerlink" title="electron-builder"></a>electron-builder</h2><p>electron-builder配置项非常丰富，具体使用可查阅<a href="https://www.electron.build/" target="_blank" rel="noopener">官方文档</a>。</p>
+<h3 id="打包到Windows"><a href="#打包到Windows" class="headerlink" title="打包到Windows"></a>打包到Windows</h3><h4 id="nsis-web包类型-recommended"><a href="#nsis-web包类型-recommended" class="headerlink" title="nsis-web包类型(recommended)"></a>nsis-web包类型(recommended)</h4><p>以目标平台为Windows为例，nsis-web形式包含一个几百kb的通用安装包(.exe)和x64、x86架构下相应的软件包(.7z)。</p>
+<p>如果安装包托管在网站上，分发时只需要分发exe文件。这样不仅无需考虑用户操作系统架构，而且安装包比32位+64位减少了一半的大小。</p>
+<p><img src="electron-builder-nsis-web-installer.png" alt="electron-builder-nsis-web-installer"></p>
+<h5 id="package-json配置"><a href="#package-json配置" class="headerlink" title="package.json配置"></a>package.json配置</h5><h5 id="配置scripts"><a href="#配置scripts" class="headerlink" title="配置scripts:"></a>配置scripts:</h5><pre class="line-numbers language-json"><code class="language-json"><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"release"</span><span class="token operator">:</span> <span class="token string">"electron-builder"</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><em><code>electron-builder</code>后的参数参照<a href="https://www.electron.build/cli" target="_blank" rel="noopener">CLI Building参数</a>。</em></p>
+<p><em>如果安装包要自动上传到GitHub上，则script的必须命名为<code>release</code>。</em></p>
+<h5 id="配置build参数："><a href="#配置build参数：" class="headerlink" title="配置build参数："></a>配置build参数：</h5><pre class="line-numbers language-json"><code class="language-json"><span class="token property">"build"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"nsisWeb"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"artifactName"</span><span class="token operator">:</span> <span class="token string">"${productName}_Setup_${version}.${ext}"</span><span class="token punctuation">,</span>
+    <span class="token property">"oneClick"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"perMachine"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"allowToChangeInstallationDirectory"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"win"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"target"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"nsis-web"</span><span class="token punctuation">,</span>
+        <span class="token property">"arch"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"x64"</span><span class="token punctuation">,</span> <span class="token string">"ia32"</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"publish"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"provider"</span><span class="token operator">:</span> <span class="token string">"github"</span><span class="token punctuation">,</span>
+    <span class="token property">"repo"</span><span class="token operator">:</span> <span class="token string">"electron-app"</span><span class="token punctuation">,</span>
+    <span class="token property">"owner"</span><span class="token operator">:</span> <span class="token string">"luffySAMA"</span><span class="token punctuation">,</span>
+    <span class="token property">"releaseType"</span><span class="token operator">:</span> <span class="token string">"release"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其中<code>nsisWeb</code>和<code>win.target.nsis-web</code>字段指定要打包为<code>nsisWeb</code>类型。</p>
+<p><code>publish</code>字段，如果托管到GitHub，则</p>
+<ul>
+<li>provider: “github”</li>
+<li>repo: 托管的repository</li>
+<li>owner: 托管的GitHub账户用户名</li>
+<li>releaseType: “release”</li>
+</ul>
+<p>如果托管到其它服务器，则按照文档填写，比如自己的服务器，则</p>
+<ul>
+<li>provider: “generic”</li>
+<li>url: “<a href="https://example.com/latest/&quot;" target="_blank" rel="noopener">https://example.com/latest/&quot;</a></li>
+</ul>
+<p>其余字段按需配置。</p>
+<h5 id="创建GH-TOKEN"><a href="#创建GH-TOKEN" class="headerlink" title="创建GH_TOKEN"></a>创建GH_TOKEN</h5><p>在<code>GitHub - Settings - Developer settings - Personal access tokens - Generate new token</code>创建一个新的token, 勾选scopes中的<code>repo</code>，生成并保存token到本地的可靠文件中。</p>
+<p><img src="gh_token.png" alt="gh_token"></p>
+<h5 id="打包及发布"><a href="#打包及发布" class="headerlink" title="打包及发布"></a>打包及发布</h5><p>参见<a href="https://www.electron.build/configuration/publish#recommended-github-releases-workflow" target="_blank" rel="noopener">recommended-github-releases-workflow</a></p>
+<ul>
+<li>在GitHub上项目中新建一个release的draft，<code>Tag version</code> 以<code>v</code>开头并与项目<code>package.json</code>中的<code>version</code>一致。<code>Release title</code>按需填写。例如，如果<code>package.json</code>中<code>version</code>是<code>1.0</code>，<code>Tag version</code> 就是<code>v1.0</code>.</li>
+<li>运行<code>GH_TOKEN=xxxxxxxxxxxxxxx
+npm run release</code>.</li>
+</ul>
+<p>此后安装包将自动发布到GitHub项目的release。<br><img src="github_release.png" alt="github_release"></p>
+<hr>
+<p>Refer:<br>[1]<a href="https://juejin.im/post/5bc53aade51d453df0447927" target="_blank" rel="noopener">electron-builder打包见解
+</a><br>[2]<a href="https://www.luffysama.com/2018/09/08/electron-nsis-web/" target="_blank" rel="noopener">Electron Nsis Web 安装包配置方法</a></p>
+
+          </div>
+        </div>
+        <!-- TOC -->
+        
+  <div id="toc">
+    <p class="toc-title"><ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC</p> 
+    <div id="tocbot"></div>
+  </div>
+  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
+  
+
+  <footer class="footer footer-default">
+  <div class="container">
+    <div class="float-left" style="padding: 15px 0;">
+        
+    </div>
+    <div class="copyright float-right">
+      &copy;
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X 
+      <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
+      <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="/js/core/popper.min.js" type="text/javascript"></script>
+<script src="/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="/js/core/material-kit.min.js?v=2.0.5" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+<link href="/css/main.css" rel="stylesheet">
+
+
+  <script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
+  <script src="/js/post.js"></script>
+  <link rel="stylesheet" href="/css/post.css">
+
+</body>
+
+</html>
