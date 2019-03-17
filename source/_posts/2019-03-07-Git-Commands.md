@@ -176,7 +176,7 @@ vim .git/config
 ```
 
 ## Git 命令速查表<sup>[∞]</sup>
-{% pdf "Git 命令速查表v2.pdf" %}
+{% pdf "Git命令速查表v2.pdf" %}
 
 ----
 

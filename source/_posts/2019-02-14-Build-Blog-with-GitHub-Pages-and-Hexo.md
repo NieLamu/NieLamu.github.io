@@ -19,7 +19,7 @@ It's a fully procedure on how to build a static blog with GitHub Pages and Hexo.
 
 The name of the repository must be similar to `NieLamu.github.io`.
 
-![Create New GitHub Pages Repo](Create New GitHub Pages Repo.png)
+![Create-New-GitHub-Pages-Repo](Create-New-GitHub-Pages-Repo.png)
 
 ### Initialize a local Hexo project
 ```bash
@@ -125,7 +125,7 @@ For example, if you own the subdomain `www.example.com`, you can configure a `CN
 
 DNS changes can take over a full day to update, and the wait varies among DNS and hosting providers.
 
-![Set up DNS in DSP](Set up DNS in DSP.png)
+![Set-up-DNS-in-DSP](Set-up-DNS-in-DSP.png)
 
 ### Set up Custom Domain in Repo
 On GitHub, navigate to your GitHub Pages site's repository.
@@ -133,7 +133,7 @@ On GitHub, navigate to your GitHub Pages site's repository.
 Under your repository name, click Settings.
 Under "Custom domain," add your custom domain and click Save.
 
-![Set up Custom Domain in Repo](Set up Custom Domain in Repo.png)
+![Set-up-Custom-Domain-in-Repo](Set-up-Custom-Domain-in-Repo.png)
 
 ### Create CNAME file
 Create a file named `CNAME` in `source` folder with `YOUR-GITHUB-USERNAME.github.io` as content.

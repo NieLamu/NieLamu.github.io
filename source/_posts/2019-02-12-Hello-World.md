@@ -99,7 +99,7 @@ npx hexo clean && npx hexo g -d
 ```
 
 ### images
-![img_test](img_test.png)
+![img-test](img-test.png)
 
 ----
 

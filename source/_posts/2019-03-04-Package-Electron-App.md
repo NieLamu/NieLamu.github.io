@@ -86,7 +86,7 @@ electron-builder配置项非常丰富，具体使用可查阅[官方文档](http
 
 在`GitHub - Settings - Developer settings - Personal access tokens - Generate new token`创建一个新的token, 勾选scopes中的`repo`，生成并保存token到本地的可靠文件中。
 
-![gh_token](gh_token.png)
+![gh-token](gh-token.png)
 
 ##### 打包及发布
 
@@ -97,7 +97,7 @@ electron-builder配置项非常丰富，具体使用可查阅[官方文档](http
  npm run release`.
 
 此后安装包将自动发布到GitHub项目的release。
-![github_release](github_release.png)
+![github-release](github-release.png)
 
 ----
 
