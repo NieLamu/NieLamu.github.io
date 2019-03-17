@@ -238,6 +238,17 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
 vim .gitmodules
 vim .git/config
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># Add tag</span>
+<span class="token function">git</span> tag -a tagName -m tagMessage
+<span class="token comment" spellcheck="true"># List tags</span>
+<span class="token function">git</span> tag
+<span class="token comment" spellcheck="true"># Push tag</span>
+<span class="token function">git</span> push origin tagName
+<span class="token comment" spellcheck="true"># Delete local tag</span>
+<span class="token function">git</span> tag -d tagName
+<span class="token comment" spellcheck="true"># Delete remote tag</span>
+<span class="token function">git</span> push origin :refs/tags/tagName
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="Git-命令速查表-∞"><a href="#Git-命令速查表-∞" class="headerlink" title="Git 命令速查表[∞]"></a>Git 命令速查表<sup>[∞]</sup></h2>
 
 	<div class="row">
