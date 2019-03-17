@@ -61,8 +61,7 @@ h3:before,
 h4:before,
 h5:before,
 h6:before {
-  content: ">";
-  margin-right: 16px;
+  content: "➜";
   cursor: pointer;
 /*   pointer-events: auto; */
   color: var(--bgColor);
@@ -73,8 +72,8 @@ h3.titleActive:before,
 h4.titleActive:before,
 h5.titleActive:before,
 h6.titleActive:before {
-  margin-right: 0px;
-  content: "✈";
+  margin-right: 6px;
+  content: "✗";
 }
 .post_content h1,
 h2,
