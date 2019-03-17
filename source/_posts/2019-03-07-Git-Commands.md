@@ -175,6 +175,21 @@ vim .gitmodules
 vim .git/config
 ```
 
+## Tags
+
+```bash
+# Add tag
+git tag -a tagName -m tagMessage
+# List tags
+git tag
+# Push tag
+git push origin tagName
+# Delete local tag
+git tag -d tagName
+# Delete remote tag
+git push origin :refs/tags/tagName
+```
+
 ## Git 命令速查表<sup>[∞]</sup>
 {% pdf "Git命令速查表v2.pdf" %}
 
