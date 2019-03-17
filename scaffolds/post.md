@@ -1,8 +1,8 @@
 ---
 title: {{ title }}
-date: {{ date }}
 categories:
-  - default
+  - [default]
 tags:
   - default
+date: {{ date }}
 ---
