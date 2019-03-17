@@ -218,6 +218,26 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
 <p>将文件/文件夹名称由<code>myFile</code>改为<code>myfile</code>，运行下面的命令后再push，否则remote仍然会存在修改之前的文件/文件夹。</p>
 <pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">rm</span> -r --cached myFile
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Submodule"><a href="#Submodule" class="headerlink" title="Submodule"></a>Submodule</h2><h3 id="Add-submodule"><a href="#Add-submodule" class="headerlink" title="Add submodule"></a>Add submodule</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> submodule add git@github.com:user/subRepo.git subRepo
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Update-submodule"><a href="#Update-submodule" class="headerlink" title="Update submodule"></a>Update submodule</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># in parent directory</span>
+<span class="token function">git</span> submodule foreach <span class="token function">git</span> pull
+<span class="token comment" spellcheck="true"># or in submodule directory</span>
+<span class="token function">cd</span> subRepo/
+<span class="token function">git</span> pull
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Clone-a-project-with-submodule"><a href="#Clone-a-project-with-submodule" class="headerlink" title="Clone a project with submodule"></a>Clone a project with submodule</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> clone git@github.com:user/parentRepo.git --recursive
+<span class="token comment" spellcheck="true"># or</span>
+<span class="token function">git</span> clone git@github.com:user/parentRepo.git
+<span class="token function">git</span> submodule init
+<span class="token function">git</span> submodule update
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Delete-submodule"><a href="#Delete-submodule" class="headerlink" title="Delete submodule"></a>Delete submodule</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">rm</span> -r --cached subRepo
+<span class="token function">rm</span> -rf subRepo
+<span class="token comment" spellcheck="true"># manually delete submodule info in these two files</span>
+vim .gitmodules
+vim .git/config
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="Git-命令速查表-∞"><a href="#Git-命令速查表-∞" class="headerlink" title="Git 命令速查表[∞]"></a>Git 命令速查表<sup>[∞]</sup></h2>
 
 	<div class="row">
