@@ -122,6 +122,9 @@ ion-icon {
   background-color: var(--bgColor);
   color: #fff !important;
 }
+.type-description:after {
+  content: "|";
+}
 .index-card {
   margin-top: 2rem;
   word-break: break-all;

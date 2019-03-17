@@ -102,7 +102,7 @@
         <h1 class="title text-center post_title">Package Electron App | Electron应用打包</h1>
         <p class="text-center">
           Created: <b>2019-03-04</b> |
-          Updated: <b>2019-03-17</b> |
+          Updated: <b>2019-03-18</b> |
           Author: <b>NieLamu</b>
         </p>
         <p class="text-center">
@@ -189,14 +189,14 @@
 </ul>
 <p>其余字段按需配置。</p>
 <h5 id="创建GH-TOKEN"><a href="#创建GH-TOKEN" class="headerlink" title="创建GH_TOKEN"></a>创建GH_TOKEN</h5><p>在<code>GitHub - Settings - Developer settings - Personal access tokens - Generate new token</code>创建一个新的token, 勾选scopes中的<code>repo</code>，生成并保存token到本地的可靠文件中。</p>
-<p><img src="gh_token.png" alt="gh_token"></p>
+<p><img src="gh-token.png" alt="gh-token"></p>
 <h5 id="打包及发布"><a href="#打包及发布" class="headerlink" title="打包及发布"></a>打包及发布</h5><p>参见<a href="https://www.electron.build/configuration/publish#recommended-github-releases-workflow" target="_blank" rel="noopener">recommended-github-releases-workflow</a></p>
 <ul>
 <li>在GitHub上项目中新建一个release的draft，<code>Tag version</code> 以<code>v</code>开头并与项目<code>package.json</code>中的<code>version</code>一致。<code>Release title</code>按需填写。例如，如果<code>package.json</code>中<code>version</code>是<code>1.0</code>，<code>Tag version</code> 就是<code>v1.0</code>.</li>
 <li>运行<code>GH_TOKEN=xxxxxxxxxxxxxxx
 npm run release</code>.</li>
 </ul>
-<p>此后安装包将自动发布到GitHub项目的release。<br><img src="github_release.png" alt="github_release"></p>
+<p>此后安装包将自动发布到GitHub项目的release。<br><img src="github-release.png" alt="github-release"></p>
 <hr>
 <p>Refer:<br>[1]<a href="https://juejin.im/post/5bc53aade51d453df0447927" target="_blank" rel="noopener">electron-builder打包见解
 </a><br>[2]<a href="https://www.luffysama.com/2018/09/08/electron-nsis-web/" target="_blank" rel="noopener">Electron Nsis Web 安装包配置方法</a></p>

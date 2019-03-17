@@ -65,7 +65,7 @@ $(document).ready(()=> {
 })
 
 
-// heading点击滑动效果
+// heading点击滚动效果
 $(document).ready(()=> {
     $('.post_content h1,h2,h3,h4,h5,h6').on('mouseenter', (e) => {
         $(`#${e.target.id}`).addClass('titleActive')

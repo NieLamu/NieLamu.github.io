@@ -102,7 +102,7 @@
         <h1 class="title text-center post_title">Build Blog with GitHub Pages and Hexo</h1>
         <p class="text-center">
           Created: <b>2019-02-14</b> |
-          Updated: <b>2019-03-17</b> |
+          Updated: <b>2019-03-18</b> |
           Author: <b>NieLamu</b>
         </p>
         <p class="text-center">
@@ -142,7 +142,7 @@
             <p>It’s a fully procedure on how to build a static blog with GitHub Pages and Hexo.</p>
 <h2 id="Prepare-a-working-project"><a href="#Prepare-a-working-project" class="headerlink" title="Prepare a working project"></a>Prepare a working project</h2><h3 id="Create-a-new-repository-on-GitHub"><a href="#Create-a-new-repository-on-GitHub" class="headerlink" title="Create a new repository on GitHub"></a>Create a new repository on GitHub</h3><p><strong>Remember to replace <code>NieLamu</code> with your username on GitHub in the following codes.</strong></p>
 <p>The name of the repository must be similar to <code>NieLamu.github.io</code>.</p>
-<p><img src="Create New GitHub Pages Repo.png" alt="Create New GitHub Pages Repo"></p>
+<p><img src="Create-New-GitHub-Pages-Repo.png" alt="Create-New-GitHub-Pages-Repo"></p>
 <h3 id="Initialize-a-local-Hexo-project"><a href="#Initialize-a-local-Hexo-project" class="headerlink" title="Initialize a local Hexo project"></a>Initialize a local Hexo project</h3><pre class="line-numbers language-bash"><code class="language-bash">npx hexo init NieLamu.github.io
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="Relate-GitHub-repository-with-local-Hexo-project"><a href="#Relate-GitHub-repository-with-local-Hexo-project" class="headerlink" title="Relate GitHub repository with local Hexo project"></a>Relate GitHub repository with local Hexo project</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> NieLamu.github.io/
@@ -190,10 +190,10 @@ npx hexo d -m <span class="token string">"update message"</span>
 <h3 id="Set-up-Domain-in-DSP"><a href="#Set-up-Domain-in-DSP" class="headerlink" title="Set up Domain in DSP"></a>Set up Domain in DSP</h3><p>Follow your DNS provider’s instructions to create a <code>CNAME</code> record that points your subdomain to your default pages domain. </p>
 <p>For example, if you own the subdomain <code>www.example.com</code>, you can configure a <code>CNAME</code> record to point <code>www.example.com</code> to <code>YOUR-GITHUB-USERNAME.github.io</code>. </p>
 <p>DNS changes can take over a full day to update, and the wait varies among DNS and hosting providers.</p>
-<p><img src="Set up DNS in DSP.png" alt="Set up DNS in DSP"></p>
+<p><img src="Set-up-DNS-in-DSP.png" alt="Set-up-DNS-in-DSP"></p>
 <h3 id="Set-up-Custom-Domain-in-Repo"><a href="#Set-up-Custom-Domain-in-Repo" class="headerlink" title="Set up Custom Domain in Repo"></a>Set up Custom Domain in Repo</h3><p>On GitHub, navigate to your GitHub Pages site’s repository.</p>
 <p>Under your repository name, click Settings.<br>Under “Custom domain,” add your custom domain and click Save.</p>
-<p><img src="Set up Custom Domain in Repo.png" alt="Set up Custom Domain in Repo"></p>
+<p><img src="Set-up-Custom-Domain-in-Repo.png" alt="Set-up-Custom-Domain-in-Repo"></p>
 <h3 id="Create-CNAME-file"><a href="#Create-CNAME-file" class="headerlink" title="Create CNAME file"></a>Create CNAME file</h3><p>Create a file named <code>CNAME</code> in <code>source</code> folder with <code>YOUR-GITHUB-USERNAME.github.io</code> as content.</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">echo</span> <span class="token string">"blog.renxiaoyao.xyz"</span> <span class="token operator">></span> source/CNAME
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
