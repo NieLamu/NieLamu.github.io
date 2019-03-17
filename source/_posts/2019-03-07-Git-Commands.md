@@ -137,6 +137,44 @@ git config --global core.ignorecase false
 $ git rm -r --cached myFile
 ```
 
+## Submodule
+
+### Add submodule
+
+```bash
+git submodule add git@github.com:user/subRepo.git subRepo
+```
+
+### Update submodule
+
+```bash
+# in parent directory
+git submodule foreach git pull
+# or in submodule directory
+cd subRepo/
+git pull
+```
+
+### Clone a project with submodule
+
+```bash
+git clone git@github.com:user/parentRepo.git --recursive
+# or
+git clone git@github.com:user/parentRepo.git
+git submodule init
+git submodule update
+```
+
+### Delete submodule
+
+```bash
+git rm -r --cached subRepo
+rm -rf subRepo
+# manually delete submodule info in these two files
+vim .gitmodules
+vim .git/config
+```
+
 ## Git 命令速查表<sup>[∞]</sup>
 {% pdf "Git 命令速查表v2.pdf" %}
 
