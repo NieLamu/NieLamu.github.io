@@ -184,6 +184,8 @@ git tag -a tagName -m tagMessage
 git tag
 # Push tag
 git push origin tagName
+# Push tags
+git push origin --tags
 # Delete local tag
 git tag -d tagName
 # Delete remote tag
