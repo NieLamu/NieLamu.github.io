@@ -6,7 +6,7 @@ tags:
   - GitHub
   - Hexo
 date: 2019-02-14 00:53:27
-banner_img: /img/GitHub%20Pages.png
+banner_img: /img/GitHub-Pages.png
 ---
 
 It's a fully procedure on how to build a static blog with GitHub Pages and Hexo.
