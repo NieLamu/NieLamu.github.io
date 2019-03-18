@@ -3,7 +3,7 @@
   word-break: break-all;
 }
 .page-header {
-  transition: background-color 3s;
+  transition: background-color 1s;
 }
 .page-header-content {
   display: flex;

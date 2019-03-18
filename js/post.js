@@ -118,9 +118,11 @@ $(document).ready(() => {
             }
         }
         for (let i = 0; i < 4; i++) {
-            pixels[i] = pixels[i] / index;
+            pixels[i] = parseInt(pixels[i] / index);
         }
-        const color = `rgb(${pixels[0]}, ${pixels[1]}, ${pixels[2]})`;
-        $('.page-header').css('background-color', color)
+        const rgb = `rgb(${pixels[0]}, ${pixels[1]}, ${pixels[2]})`;
+        $('.page-header').css('background-color', rgb)
+        const hex = "#" + ((1 << 24) + (pixels[0] << 16) + (pixels[1] << 8) + pixels[2]).toString(16).slice(1);
+        $("meta[name='theme-color']").attr('content', hex);
     }
 })
