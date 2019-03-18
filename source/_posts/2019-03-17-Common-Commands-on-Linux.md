@@ -25,6 +25,8 @@ passwd username
 ```bash
 # edit tasks
 crontab -e
+# View logging
+tail -f /var/log/cron
 ```
 
 Command format:
