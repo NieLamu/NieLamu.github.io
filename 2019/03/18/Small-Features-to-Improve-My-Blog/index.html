@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.ico">
+    <meta name="description" content="はじめまして ^_^">
+    <meta name="author" content="NieLamu">
+    <meta name="keywords" content="Blog JavaScript Python">
+    <title>Small Features to Improve My Blog ~ NieLamu | Blog</title>
+
+    <!--     Fonts and icons     -->
+    <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
+    <!-- Material Kit CSS -->
+    <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
+    <!-- MyFontsWebfontsKit -->
+    <link href="/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
+
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body class=" sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/">
+                <ion-icon name="ios-infinite"></ion-icon>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/archives/">
+                                    archives
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/">
+                                    about
+                                </a>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="Codes Page" href="https://github.com/NieLamu" target="_blank">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="INSTAGRAM" href="https://www.instagram.com/simadao/" target="_blank">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="TWITTER" href="https://twitter.com/mxmxlty2010" target="_blank">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" data-original-title="FACEBOOK" href="https://www.facebook.com/nielamu" target="_blank">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+    </div>
+</nav>
+    
+  
+  <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
+    <div class="page-header-content">
+      <div class="container">
+        <h1 class="title text-center post_title">Small Features to Improve My Blog</h1>
+        <p class="text-center">
+          Created: <b>2019-03-18</b> |
+          Updated: <b>2019-03-18</b> |
+          Author: <b>NieLamu</b>
+        </p>
+        <p class="text-center">
+          
+            <a class="badge" href="/tags/default">#default</a>
+          
+          
+            <a class="badge" href="/categories/default">>default</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+  
+  
+    
+
+
+
+<div class="main main-raised">
+  <div class="container">
+    
+    <div class="section post_img_section">
+      <div class="post_banner_img_container">
+        <a style="background-image: url('/img/index.png');" href="/img/index.png" target="_blank" class="post_banner_img"></a> 
+      </div>
+    
+      <div class="row">
+        <div class="col-md-8 offset-md-1">
+          <div class="post_content">
+            <p>Here are some small features to improve my static blog when I build it on GitHub Pages using Hexo.</p>
+<h2 id="Make-Headings-in-Markdown-Can-Scroll-to-Top-When-Clicked"><a href="#Make-Headings-in-Markdown-Can-Scroll-to-Top-When-Clicked" class="headerlink" title="Make Headings in Markdown Can Scroll to Top When Clicked"></a>Make Headings in Markdown Can Scroll to Top When Clicked</h2><p>The static blog engine adds an `id’ attribute to each heading of Markdown, so we can write some code so that it can scroll to top when we clicking. It like this:</p>
+<p><img src="Heading-Scroll-to-Top-When-Clicked.gif" alt="Heading-Scroll-to-Top-When-Clicked"></p>
+<h3 id="Add-a-tag-before-heading"><a href="#Add-a-tag-before-heading" class="headerlink" title="Add a tag before heading"></a>Add a tag before heading</h3><p>Here we use pseudo element <code>before</code> of CSS.</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.post_content</span> h1<span class="token pseudo-element">:before</span>, h2<span class="token pseudo-element">:before</span>, h3<span class="token pseudo-element">:before</span>, h4<span class="token pseudo-element">:before</span>, h5<span class="token pseudo-element">:before</span>, h6<span class="token pseudo-element">:before</span> </span><span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"➜"</span><span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+    // <span class="token property">pointer-events</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--bgColor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>We add a colorful symbol <code>➜</code> before heading, and make the cursor on it be a pointer.</p>
+<p>This makes all <code>hover</code> and <code>click</code> actions on both pseudo element and heading can be reached. If we only need the actions on pseudo element be effective, we can simply uncomment the line <code>pointer-events: auto;</code>, then add this:</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.post_content</span> h1, h2, h3, h4, h5, h6 </span><span class="token punctuation">{</span>
+    <span class="token property">pointer-events</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="Add-hover-effect-on-heading"><a href="#Add-hover-effect-on-heading" class="headerlink" title="Add hover effect on heading"></a>Add hover effect on heading</h3><pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.post_content</span> h1<span class="token pseudo-class">:hover</span><span class="token pseudo-element">:before</span>, h2<span class="token pseudo-class">:hover</span><span class="token pseudo-element">:before</span>, h3<span class="token pseudo-class">:hover</span><span class="token pseudo-element">:before</span>, h4<span class="token pseudo-class">:hover</span><span class="token pseudo-element">:before</span>, h5<span class="token pseudo-class">:hover</span><span class="token pseudo-element">:before</span>, h6<span class="token pseudo-class">:hover</span><span class="token pseudo-element">:before</span> </span><span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"✗"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="Add-click-event"><a href="#Add-click-event" class="headerlink" title="Add click event"></a>Add click event</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.post_content h1,h2,h3,h4,h5,h6'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'html,body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span> scrollTop<span class="token punctuation">:</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`#</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>top <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="A-typing-effect-on-website-description"><a href="#A-typing-effect-on-website-description" class="headerlink" title="A typing effect on website description"></a>A typing effect on website description</h2><p><img src="typing-effect.gif" alt="typing-effect"></p>
+<p>With interval we can do this.</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> cls <span class="token operator">=</span> <span class="token string">'type-description'</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> typeEle <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`.</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>cls<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> sentence <span class="token operator">=</span> typeEle<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> len <span class="token operator">=</span> sentence<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> letters <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    typeEle<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>letters<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    typeEle<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'display'</span><span class="token punctuation">,</span> <span class="token string">'block'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        letters <span class="token operator">+</span><span class="token operator">=</span> sentence<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        typeEle<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>letters<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        index<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> len<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">clearInterval</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            typeEle<span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>type-description<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>はじめまして ^_^<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Use-main-color-of-an-image-as-background-of-page"><a href="#Use-main-color-of-an-image-as-background-of-page" class="headerlink" title="Use main color of an image as background of page"></a>Use main color of an image as background of page</h2><p><img src="Use-main-color-of-an-image-as-background.gif" alt="Use-main-color-of-an-image-as-background"></p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// Create an invisible canvas</span>
+<span class="token keyword">const</span> canvas <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"canvas"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+canvas<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">'none'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Get image source</span>
+<span class="token keyword">const</span> imgSrc <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.post_banner_img_container a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Create an image element</span>
+<span class="token keyword">const</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>src <span class="token operator">=</span> imgSrc<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// If CORS error happened, add crossOrigin attribute to img</span>
+img<span class="token punctuation">.</span>crossOrigin <span class="token operator">=</span> <span class="token string">'Anonymous'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Wait until the picture resource is loaded before drawing on Canvas</span>
+img<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Draw image on canvas</span>
+    canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> img<span class="token punctuation">.</span>width<span class="token punctuation">;</span>
+    canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> img<span class="token punctuation">.</span>height<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ctx<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> canvas<span class="token punctuation">.</span>width<span class="token punctuation">,</span> canvas<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// Get image pixel data</span>
+    <span class="token keyword">const</span> data <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">getImageData</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> canvas<span class="token punctuation">.</span>width<span class="token punctuation">,</span> canvas<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// Calculate average color</span>
+    <span class="token keyword">let</span> pixels <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> len <span class="token operator">=</span> data<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> offset<span class="token punctuation">,</span> r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">,</span> a<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        offset <span class="token operator">=</span> i <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">;</span>
+        r <span class="token operator">=</span> data<span class="token punctuation">[</span>offset <span class="token operator">+</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        g <span class="token operator">=</span> data<span class="token punctuation">[</span>offset <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        b <span class="token operator">=</span> data<span class="token punctuation">[</span>offset <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        a <span class="token operator">=</span> data<span class="token punctuation">[</span>offset <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// If pixel is mostly opaque and not white</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">>=</span> <span class="token number">125</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token punctuation">(</span>r <span class="token operator">></span> <span class="token number">250</span> <span class="token operator">&amp;&amp;</span> g <span class="token operator">></span> <span class="token number">250</span> <span class="token operator">&amp;&amp;</span> b <span class="token operator">></span> <span class="token number">250</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          pixels<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> r<span class="token punctuation">;</span>
+          pixels<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> g<span class="token punctuation">;</span>
+          pixels<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> b<span class="token punctuation">;</span>
+          pixels<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> a<span class="token punctuation">;</span>
+          index<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        pixels<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> pixels<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">/</span>index<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> color <span class="token operator">=</span> <span class="token template-string"><span class="token string">`rgb(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>pixels<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>pixels<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>pixels<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)`</span></span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.page-header'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background-color'</span><span class="token punctuation">,</span> color<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Then add <code>transition</code> to CSS of <code>.page-header</code>.</p>
+
+          </div>
+        </div>
+        <!-- TOC -->
+        
+  <div id="toc">
+    <p class="toc-title"><ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC</p> 
+    <div id="tocbot"></div>
+  </div>
+  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
+  
+
+  <footer class="footer footer-default">
+  <div class="container">
+    <div class="float-left" style="padding: 15px 0;">
+        
+    </div>
+    <div class="copyright float-right">
+      &copy;
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X 
+      <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
+      <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="/js/core/popper.min.js" type="text/javascript"></script>
+<script src="/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="/js/core/material-kit.min.js?v=2.0.5" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+<link href="/css/main.css" rel="stylesheet">
+
+
+  <script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
+  <script src="/js/post.js"></script>
+  <link rel="stylesheet" href="/css/post.css">
+
+</body>
+
+</html>

@@ -124,8 +124,7 @@
 
 
   
-  <canvas id="post_img_canvas" style="display: none;"></canvas>
-
+  
     
 
 
@@ -150,7 +149,9 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="crontab"><a href="#crontab" class="headerlink" title="crontab"></a>crontab</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># edit tasks</span>
 <span class="token function">crontab</span> -e
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<span class="token comment" spellcheck="true"># View logging</span>
+<span class="token function">tail</span> -f /var/log/cron
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Command format:</p>
 <table>
 <thead>

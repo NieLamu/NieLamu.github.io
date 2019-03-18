@@ -67,12 +67,12 @@ $(document).ready(()=> {
 
 // heading点击滚动效果
 $(document).ready(()=> {
-    $('.post_content h1,h2,h3,h4,h5,h6').on('mouseenter', (e) => {
-        $(`#${e.target.id}`).addClass('titleActive')
-    })
-    $('.post_content h1,h2,h3,h4,h5,h6').on('mouseleave', (e) => {
-        $(`#${e.target.id}`).removeClass('titleActive')
-    })
+    // $('.post_content h1,h2,h3,h4,h5,h6').on('mouseenter', (e) => {
+    //     $(`#${e.target.id}`).addClass('titleActive')
+    // })
+    // $('.post_content h1,h2,h3,h4,h5,h6').on('mouseleave', (e) => {
+    //     $(`#${e.target.id}`).removeClass('titleActive')
+    // })
     $('.post_content h1,h2,h3,h4,h5,h6').click((e) => {
         $('html,body').animate({ scrollTop: $(`#${e.target.id}`).offset().top }, 500);
     });
@@ -81,43 +81,46 @@ $(document).ready(()=> {
 
 // 题图背景应用主色调
 $(document).ready(() => {
-    const canvas = $('#post_img_canvas')[0];
+    // Create an invisible canvas
+    const canvas = document.createElement("canvas");
+    canvas.style.display = 'none';
+    // Get image source
     const imgSrc = $('.post_banner_img_container a').attr('href');
+    // Create an image element
     const img = new Image();
+    img.src = imgSrc;
+    // If CORS error happened, add crossOrigin attribute to img
     img.crossOrigin = 'Anonymous';
-    /**等图片资源加载完成后，才在 Canvas 上进行绘制渲染*/
+    // Wait until the picture resource is loaded before drawing on Canvas
     img.onload = () => {
+        // Draw image on canvas
         canvas.width = img.width;
         canvas.height = img.height;
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        try {
-            const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-            let pixels = [[], [], []];
-            const len = data.length;
-            for (let i = 0, offset, r, g, b, a; i < len / 4; i++) {
-                offset = i * 4;
-                r = data[offset + 0];
-                g = data[offset + 1];
-                b = data[offset + 2];
-                a = data[offset + 3];
-                // If pixel is mostly opaque and not white
-                if (a >= 125) {
-                    if (!(r > 250 && g > 250 && b > 250)) {
-                        pixels[0].push(r);
-                        pixels[1].push(g);
-                        pixels[2].push(b);
-                    }
-                }
+        // Get image pixel data
+        const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        let pixels = [0, 0, 0, 0], index = 0;
+        const len = data.length;
+        for (let i = 0, offset, r, g, b, a; i < len / 4; i++) {
+            offset = i * 4;
+            r = data[offset + 0];
+            g = data[offset + 1];
+            b = data[offset + 2];
+            a = data[offset + 3];
+            // If pixel is mostly opaque and not white
+            if (a >= 125 && !(r > 250 && g > 250 && b > 250)) {
+                pixels[0] += r;
+                pixels[1] += g;
+                pixels[2] += b;
+                pixels[3] += a;
+                index++;
             }
-            for (let i = 0; i < 3; i++) {
-                pixels[i] = parseInt(eval(pixels[i].join('+')) / pixels[i].length);
-            }
-            const color = `rgb(${pixels[0]}, ${pixels[1]}, ${pixels[2]})`;
-            $('.page-header').css('background-color', color)
         }
-        catch (err) { }
-
+        for (let i = 0; i < 4; i++) {
+            pixels[i] = pixels[i] / index;
+        }
+        const color = `rgb(${pixels[0]}, ${pixels[1]}, ${pixels[2]})`;
+        $('.page-header').css('background-color', color)
     }
-    img.src = imgSrc;
 })

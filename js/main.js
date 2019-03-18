@@ -24,7 +24,6 @@ $(document).ready(() => {
     typeEle.text(letters); 
     typeEle.css('display', 'block');
     const timer = setInterval(()=> {
-        console.log(sentence[index]);
         letters += sentence[index];
         typeEle.text(letters);
         index++;
