@@ -40,7 +40,29 @@ Characters meaning:
 * \- from to
 * / interval
 
-----
+## SSH
+
+### Installation and configuration
+
+```bash
+# Install ssh-server
+apt-get install openssh-server
+# (Re)Start service
+sudo /etc/init.d/ssh (re)start
+# Check if started
+ps -e | grep ssh
+# Edit configs
+vim /etc/ssh/sshd_config
+PermitRootLogin yes # Allow root login
+PasswordAuthentication yes # Allow password login
+```
+
+**If in WSL, you must change the port if SSH because Windows already uses the default port 22.**
+
+### PS. Installing the Windows 10 OpenSSH Server
+
+Go to `Settings-Applications and Functions-Manage optional features`, and click on the `Add a feature` button, then install `OpenSSH Server`. After the installation, two new Windows services called sshd and sshd-agent will have been created, you can manually start them and set their startup type to `automatic`.
 
 Refer:
 [1][Linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
+[2][How to Install the Built-In Windows 10 OpenSSH Server](https://www.bleepingcomputer.com/news/microsoft/how-to-install-the-built-in-windows-10-openssh-server/)
