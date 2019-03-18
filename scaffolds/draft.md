@@ -1,8 +1,8 @@
 ---
 title: {{ title }}
 categories:
-- [default]
+- Programming
 tags:
-- default
+- Programming
 date: {{ date }}
 ---

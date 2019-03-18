@@ -1,9 +1,9 @@
 ---
 title: Small Features to Improve My Blog
 categories:
-  - - default
+  - [Programming, Web]
 tags:
-  - default
+  - Web
 banner_img: /img/index.png
 date: 2019-03-18 21:18:43
 ---
