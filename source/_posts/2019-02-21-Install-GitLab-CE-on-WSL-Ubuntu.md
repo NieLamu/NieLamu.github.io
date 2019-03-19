@@ -32,7 +32,7 @@ The edition names of Ubuntu like `bionic` are on [](https://launchpad.net/ubuntu
 
 ## Modify GitLab configuration settings
 
-Configure a URL for your GitLab instance by setting `external_url` configuration in `/etc/gitlab/gitlab.rb file`.
+Configure a URL for your GitLab instance by setting `external_url` configuration in file `/etc/gitlab/gitlab.rb`.
 
 Then, you can start your GitLab instance by running `gitlab-ctl reconfigure`.
 
