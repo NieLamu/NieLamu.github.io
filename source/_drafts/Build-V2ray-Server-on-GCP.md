@@ -46,7 +46,17 @@ Computer Engine相当于阿里云的ECS，也就是虚拟机（服务器），�
 
 #### 配置密码登录SSH
 
-在`/etc/ssh/sshd_config`中增加`PasswordAuthentication yes`，用`sudo /etc/init.d/ssh restart`重启SSH。
+在`/etc/ssh/sshd_config`中:
+
+```conf
+PasswordAuthentication yes
+# 必须开启root登录，否则使用sudo时会报username is not in the sudoers file，加进文件也不管用。
+PermitRootLogin yes
+```
+
+```bash
+sudo /etc/init.d/ssh restart
+```
 
 ## 安全问题
 
@@ -75,11 +85,11 @@ We have  recently detected that your Google Cloud Project XXX has been performin
 
 ```bash
 # 官方脚本安装
-bash <(curl -L -s https://install.direct/go.sh)
+sudo bash <(curl -L -s https://install.direct/go.sh)
 # 启动
 sudo systemctl start v2ray
 # 更新
-bash go.sh
+sudo bash go.sh
 ```
 
 #### Windows
