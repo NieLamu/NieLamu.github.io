@@ -20,7 +20,7 @@
     <meta name="author" content="NieLamu">
     <meta name="keywords" content="Blog JavaScript Python">
     <meta name="theme-color" content="#00bcd4">
-    <title>Install GitLab CE on WSL Ubuntu (Failed) ~ NieLamu | Blog</title>
+    <title>Install GitLab CE on WSL Ubuntu ~ NieLamu | Blog</title>
 
     <!--     Fonts and icons     -->
     <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
@@ -100,7 +100,7 @@
   <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
     <div class="page-header-content">
       <div class="container">
-        <h1 class="title text-center post_title">Install GitLab CE on WSL Ubuntu (Failed)</h1>
+        <h1 class="title text-center post_title">Install GitLab CE on WSL Ubuntu</h1>
         <p class="text-center">
           Created: <b>2019-02-21</b> |
           Updated: <b>2019-03-19</b> |
@@ -150,8 +150,18 @@
 <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> gitlab-ce
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>The edition names of Ubuntu like <code>bionic</code> are on <a href="https://launchpad.net/ubuntu" target="_blank" rel="noopener"></a>.</p>
-<h2 id="Modify-GitLab-configuration-settings"><a href="#Modify-GitLab-configuration-settings" class="headerlink" title="Modify GitLab configuration settings"></a>Modify GitLab configuration settings</h2><p>Configure a URL for your GitLab instance by setting <code>external_url</code> configuration in file <code>/etc/gitlab/gitlab.rb</code>.</p>
-<p>Then, you can start your GitLab instance by running <code>gitlab-ctl reconfigure</code>.</p>
+<h2 id="Modify-GitLab-configuration-settings"><a href="#Modify-GitLab-configuration-settings" class="headerlink" title="Modify GitLab configuration settings"></a>Modify GitLab configuration settings</h2><p>Setting are in <code>/etc/gitlab/gitlab.rb</code>.</p>
+<pre class="line-numbers language-rb"><code class="language-rb"># Set Url
+external_url 'http://localhost:9090'
+# Error 502 and 'GitLab is not responding' may be unicorn port occupancy
+unicorn['port'] = 8801
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>After configuration, you need:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">gitlab-ctl reconfigure
+gitlab-ctl restart
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Visit <code>http://localhost:9090</code>, you will be asked to set your password with user name <code>root</code>.</p>
+<p><img src="gitlab-welcome-page.png" alt="gitlab-welcome-page"></p>
 <h2 id="Some-errors"><a href="#Some-errors" class="headerlink" title="Some errors"></a>Some errors</h2><p>The first time I ran this, it was fail and showed:</p>
 <pre><code>Couldn&#39;t find an alternative telinit implementation to spawn.
 </code></pre><p>So I tried running the command again and after some messages, the process was blocked by:</p>
@@ -176,6 +186,7 @@ dpkg --get-selections <span class="token operator">|</span> <span class="token f
 <span class="token function">sudo</span> <span class="token function">apt-get</span> --purge remove gitlab-ce
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Everything’s quiet.</p>
+<p>Update:<br>2019.03.19 Succeed on another Machine.</p>
 
           </div>
         </div>
