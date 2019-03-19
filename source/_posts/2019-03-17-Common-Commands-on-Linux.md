@@ -18,6 +18,8 @@ sudo du
 su username
 # modify password
 passwd username
+# permanently delete user (include directory)
+userdel -r username
 ```
 
 ## crontab
