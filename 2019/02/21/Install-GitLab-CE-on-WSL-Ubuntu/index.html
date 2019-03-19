@@ -103,7 +103,7 @@
         <h1 class="title text-center post_title">Install GitLab CE on WSL Ubuntu (Failed)</h1>
         <p class="text-center">
           Created: <b>2019-02-21</b> |
-          Updated: <b>2019-03-17</b> |
+          Updated: <b>2019-03-19</b> |
           Author: <b>NieLamu</b>
         </p>
         <p class="text-center">
@@ -150,7 +150,7 @@
 <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> gitlab-ce
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>The edition names of Ubuntu like <code>bionic</code> are on <a href="https://launchpad.net/ubuntu" target="_blank" rel="noopener"></a>.</p>
-<h2 id="Modify-GitLab-configuration-settings"><a href="#Modify-GitLab-configuration-settings" class="headerlink" title="Modify GitLab configuration settings"></a>Modify GitLab configuration settings</h2><p>Configure a URL for your GitLab instance by setting <code>external_url</code> configuration in <code>/etc/gitlab/gitlab.rb file</code>.</p>
+<h2 id="Modify-GitLab-configuration-settings"><a href="#Modify-GitLab-configuration-settings" class="headerlink" title="Modify GitLab configuration settings"></a>Modify GitLab configuration settings</h2><p>Configure a URL for your GitLab instance by setting <code>external_url</code> configuration in file <code>/etc/gitlab/gitlab.rb</code>.</p>
 <p>Then, you can start your GitLab instance by running <code>gitlab-ctl reconfigure</code>.</p>
 <h2 id="Some-errors"><a href="#Some-errors" class="headerlink" title="Some errors"></a>Some errors</h2><p>The first time I ran this, it was fail and showed:</p>
 <pre><code>Couldn&#39;t find an alternative telinit implementation to spawn.
