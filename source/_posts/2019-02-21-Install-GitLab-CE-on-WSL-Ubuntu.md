@@ -1,5 +1,5 @@
 ---
-title: Install GitLab CE on WSL Ubuntu (Failed)
+title: Install GitLab CE on WSL Ubuntu
 categories:
   - [Programming, GitLab]
 tags:
@@ -32,9 +32,25 @@ The edition names of Ubuntu like `bionic` are on [](https://launchpad.net/ubuntu
 
 ## Modify GitLab configuration settings
 
-Configure a URL for your GitLab instance by setting `external_url` configuration in file `/etc/gitlab/gitlab.rb`.
+Setting are in `/etc/gitlab/gitlab.rb`.
 
-Then, you can start your GitLab instance by running `gitlab-ctl reconfigure`.
+```rb
+# Set Url
+external_url 'http://localhost:9090'
+# Error 502 and 'GitLab is not responding' may be unicorn port occupancy
+unicorn['port'] = 8801
+```
+
+After configuration, you need:
+
+```bash
+gitlab-ctl reconfigure
+gitlab-ctl restart
+```
+
+Visit `http://localhost:9090`, you will be asked to set your password with user name `root`.
+
+![gitlab-welcome-page](gitlab-welcome-page.png)
 
 ## Some errors
 
@@ -88,3 +104,6 @@ sudo apt-get --purge remove gitlab-ce
 ```
 
 Everything's quiet.
+
+Update:
+2019.03.19 Succeed on another Machine.
