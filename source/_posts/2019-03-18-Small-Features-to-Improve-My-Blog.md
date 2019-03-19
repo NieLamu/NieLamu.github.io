@@ -139,3 +139,16 @@ img.onload = () => {
 ```
 
 Then add `transition` to CSS of `.page-header`.
+
+## Colorful status bar in Chrome on Android
+
+```html
+<meta name="theme-color" content="#00bcd4">
+```
+
+```javascript
+const hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+$("meta[name='theme-color']").attr('content', hex);
+```
+
+By dynamically changing the attribute content if `theme-color` meta, we can make this effect.
