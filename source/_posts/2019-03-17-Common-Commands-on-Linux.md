@@ -61,7 +61,7 @@ PermitRootLogin yes # Allow root login
 PasswordAuthentication yes # Allow password login
 ```
 
-**If in WSL, you must change the port if SSH because Windows already uses the default port 22.**
+**If in WSL, you must change the port of SSH because Windows already uses the default port 22.**
 
 ### PS. Installing the Windows 10 OpenSSH Server
 
