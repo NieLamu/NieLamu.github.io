@@ -1,5 +1,5 @@
 ---
-title: Install GitLab CE on WSL Ubuntu
+title: Install GitLab CE on Ubuntu
 categories:
   - [Programming, GitLab]
 tags:
@@ -107,3 +107,9 @@ Everything's quiet.
 
 Update:
 2019.03.19 Succeed on another Machine.
+
+----
+
+Refer:
+
+Related:

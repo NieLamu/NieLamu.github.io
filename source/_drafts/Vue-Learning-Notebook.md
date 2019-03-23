@@ -32,8 +32,15 @@ v-if  ==> ng-if
 DOM 结构
 添加 key高效地复用
 v-for
+数组语法v-for="(item, index) in items" 可用of代替in
+对象语法v-for="(value, key, index) in object"
+当在组件中使用 v-for 时，key 现在是必须的。
 v-on
+原始的 DOM 事件可用 $event 传递
+事件修饰符
 v-model
+语法糖
+应该通过 JavaScript 在组件的 data 选项中声明初始值。
 
 
 
@@ -47,3 +54,9 @@ $created、$mounted、$updated、$destroyed
 
 不要使用箭头函数
 ```
+
+----
+
+Refer:
+
+Related:

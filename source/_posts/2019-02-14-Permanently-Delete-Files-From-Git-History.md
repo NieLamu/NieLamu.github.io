@@ -24,14 +24,14 @@ If you want to clear a directory, add `-r` after `git rm --cached`.
 
 The following message is successfull info.
 
-```
+```bash
 Rewrite e9a2f6be143f4f743f72800821e92c4aa2da7a0d (15/16)
 Ref 'refs/heads/master' was rewritten
 ```
 
 Meanwhile the following message is NO SUCH FILE info.
 
-```
+```bash
 WARNING: Ref 'refs/heads/master' is unchanged
 ```
 
@@ -63,3 +63,5 @@ git gc --aggressive --prune=now
 Refer:
 [1][Git如何永久删除文件(包括历史记录)](http://www.cnblogs.com/shines77/p/3460274.html)
 [2][彻底删除 Git 仓库中的文件避免占用大量磁盘空间](https://walterlv.oschina.io/git/2017/09/18/delete-a-file-from-whole-git-history.html)
+
+Related:
