@@ -20,7 +20,7 @@
     <meta name="author" content="NieLamu">
     <meta name="keywords" content="Blog JavaScript Python">
     <meta name="theme-color" content="#00bcd4">
-    <title>Merge Two Branches From Two Git Projects ~ NieLamu | Blog</title>
+    <title>WSL GUI Using Xming ~ NieLamu | Blog</title>
 
     <!--     Fonts and icons     -->
     <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
@@ -100,20 +100,18 @@
   <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
     <div class="page-header-content">
       <div class="container">
-        <h1 class="title text-center post_title">Merge Two Branches From Two Git Projects</h1>
+        <h1 class="title text-center post_title">WSL GUI Using Xming</h1>
         <p class="text-center">
-          Created: <b>2019-02-15</b> |
+          Created: <b>2019-03-23</b> |
           Updated: <b>2019-03-23</b> |
           Author: <b>NieLamu</b>
         </p>
         <p class="text-center">
           
-            <a class="badge" href="/tags/Git">#Git</a>
+            <a class="badge" href="/tags/Programming">#Programming</a>
           
           
             <a class="badge" href="/categories/Programming">>Programming</a>
-          
-            <a class="badge" href="/categories/Git">>Git</a>
           
         </p>
       </div>
@@ -136,23 +134,20 @@
       <div class="row">
         <div class="col-md-8 offset-md-1">
           <div class="post_content">
-            <p>We have one git project that references another project. After some commits, we want to fork the reference project and merge the commits of the two projects.<br>The branches of the two projects are as follows:</p>
-<pre><code>ourProject -&gt; develop
-forkedProject -&gt; master
-</code></pre><p>We need merge <code>master</code> branch of <code>forkedProject</code> to <code>develop</code> branch of <code>ourProject</code>.</p>
-<h2 id="Get-branch-of-project-forked"><a href="#Get-branch-of-project-forked" class="headerlink" title="Get branch of project forked"></a>Get branch of project forked</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> ourProject
-<span class="token function">git</span> checkout develop
-<span class="token function">git</span> remote add base forkedProject.git
-<span class="token function">git</span> checkout -b temp
-<span class="token function">git</span> pull base master
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>If there is an error like <code>fatal: refusing to merge unrelated histories...</code>, then add <code>--allow-unrelated-histories</code> after the command.</p>
-<h2 id="Merge-branches"><a href="#Merge-branches" class="headerlink" title="Merge branches"></a>Merge branches</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> checkout develop
-<span class="token function">git</span> merge temp
-<span class="token function">git</span> commit -m <span class="token string">"merge"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+            <hr>
+<p>Refer:</p>
+<p>Related:</p>
+<p>Here we start use Xming as Gui on WSL.</p>
+<h2 id="Configuration-on-WSL"><a href="#Configuration-on-WSL" class="headerlink" title="Configuration on WSL"></a>Configuration on WSL</h2><p>Add this line to your <code>.bashrc</code> or <code>.zshrc</code>.</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">export</span> DISPLAY<span class="token operator">=</span>:0
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Install-Xming-on-Windows"><a href="#Install-Xming-on-Windows" class="headerlink" title="Install Xming on Windows"></a>Install Xming on Windows</h2><p>Visit <a href="https://sourceforge.net/projects/xming/" target="_blank" rel="noopener">Xming X Server for Windows</a>, download Xming and install it.</p>
+<p>Open XLaunch and configure it. That <code>Display number</code> must be same with DISPLAY number configuration on WSL, which is <code>0</code> now.</p>
+<p>After this, open Xming and input your command in WSL, the GUI will show.</p>
+<h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><h4 id="Tkinter-error"><a href="#Tkinter-error" class="headerlink" title="Tkinter error"></a>Tkinter error</h4><p>When Python3 script using <code>matplotlib</code> shows error like <code>no module named &quot;tkinter&quot;</code>, you may need run <code>sudo apt-get install python3-tk</code> to solve it.</p>
+<p>#### </p>
 <hr>
-<p>Refer:<br>[1]<a href="https://blog.csdn.net/zh_1191/article/details/79036608" target="_blank" rel="noopener">同一工程中，合并两个git项目内容</a></p>
+<p>Refer:<br>[1]<a href="https://www.jianshu.com/p/aca81f8c7f08" target="_blank" rel="noopener">Winodws Linux Subsystem（WSL）的安装及GUI图形界面启用</a><br>[2]<a href="https://stackoverflow.com/questions/36327134/matplotlib-error-no-module-named-tkinter" target="_blank" rel="noopener">matplotlib error - no module named tkinter</a></p>
 <p>Related:</p>
 
           </div>

@@ -103,7 +103,7 @@
         <h1 class="title text-center post_title">Permanently Delete Files From Git History</h1>
         <p class="text-center">
           Created: <b>2019-02-14</b> |
-          Updated: <b>2019-03-17</b> |
+          Updated: <b>2019-03-23</b> |
           Author: <b>NieLamu</b>
         </p>
         <p class="text-center">
@@ -146,11 +146,13 @@
 <p><strong>Do not let the path start with ‘/‘ which will make it be considered to be in the install dir of Git.</strong></p>
 <p>If you want to clear a directory, add <code>-r</code> after <code>git rm --cached</code>.</p>
 <p>The following message is successfull info.</p>
-<pre><code>Rewrite e9a2f6be143f4f743f72800821e92c4aa2da7a0d (15/16)
-Ref &#39;refs/heads/master&#39; was rewritten
-</code></pre><p>Meanwhile the following message is NO SUCH FILE info.</p>
-<pre><code>WARNING: Ref &#39;refs/heads/master&#39; is unchanged
-</code></pre><h2 id="Push-changes"><a href="#Push-changes" class="headerlink" title="Push changes"></a>Push changes</h2><p>Compulsively push the changes to remote.</p>
+<pre class="line-numbers language-bash"><code class="language-bash">Rewrite e9a2f6be143f4f743f72800821e92c4aa2da7a0d <span class="token punctuation">(</span>15/16<span class="token punctuation">)</span>
+Ref <span class="token string">'refs/heads/master'</span> was rewritten
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Meanwhile the following message is NO SUCH FILE info.</p>
+<pre class="line-numbers language-bash"><code class="language-bash">WARNING: Ref <span class="token string">'refs/heads/master'</span> is unchanged
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Push-changes"><a href="#Push-changes" class="headerlink" title="Push changes"></a>Push changes</h2><p>Compulsively push the changes to remote.</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> push origin master --force
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>Push Git tags.</p>
@@ -163,6 +165,7 @@ Ref &#39;refs/heads/master&#39; was rewritten
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>Refer:<br>[1]<a href="http://www.cnblogs.com/shines77/p/3460274.html" target="_blank" rel="noopener">Git如何永久删除文件(包括历史记录)</a><br>[2]<a href="https://walterlv.oschina.io/git/2017/09/18/delete-a-file-from-whole-git-history.html" target="_blank" rel="noopener">彻底删除 Git 仓库中的文件避免占用大量磁盘空间</a></p>
+<p>Related:</p>
 
           </div>
         </div>

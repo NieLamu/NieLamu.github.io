@@ -103,7 +103,7 @@
         <h1 class="title text-center post_title">Build Cross Platform App With Electron</h1>
         <p class="text-center">
           Created: <b>2019-03-04</b> |
-          Updated: <b>2019-03-17</b> |
+          Updated: <b>2019-03-23</b> |
           Author: <b>NieLamu</b>
         </p>
         <p class="text-center">
@@ -156,7 +156,29 @@ window<span class="token punctuation">.</span>nodeRequire <span class="token ope
 <p>Then we can run <code>npm install</code> like before.</p>
 <h3 id="Download-dependencies-failed-when-package-App-with-electron-builder"><a href="#Download-dependencies-failed-when-package-App-with-electron-builder" class="headerlink" title="Download dependencies failed when package App with electron-builder"></a>Download dependencies failed when package App with electron-builder</h3><p>When we run <code>electron-builder</code> to package our App first time, the subprocess downloading Electron like <code>electron-v4.0.6-win32-x64.zip</code> may fail due to the awful network.</p>
 <p>Download Electron package from <a href="https://npm.taobao.org/mirrors/electron/" target="_blank" rel="noopener">the mirror of Electron in China</a> and put it in <code>C:\Users\yourName\AppData\Local\electron\Cache\</code>, then run the command like before.<br>If the dependence is <code>nsis</code>, download the package from the link show on screen and put the folder unpacked in <code>C:\Users\yourName\AppData\Local\electron-builder\cache\nsis\</code>.</p>
+<h3 id="Preinstall-failed-on-WSL"><a href="#Preinstall-failed-on-WSL" class="headerlink" title="Preinstall failed on WSL"></a>Preinstall failed on WSL</h3><p>There is a script in <code>package.json</code>:</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"preinstall"</span><span class="token operator">:</span> <span class="token string">"rm -rf node_modules &amp; rm -f package-lock.json"</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>When running <code>npm install</code>, we got <code>cannot run in wd HuXinJia@1.0.0 rm -rf node_modules &amp; rm -f package-lock.json (wd=/mnt/d/mles-pc)</code></p>
+<p>Following <a href="https://stackoverflow.com/questions/18136746/npm-install-failed-with-cannot-run-in-wd" target="_blank" rel="noopener">Npm install failed with “cannot run in wd”</a>, running <code>npm install --unsafe-perm</code> solved it.</p>
+<h3 id="Error-while-loading-shared-libraries-on-WSL"><a href="#Error-while-loading-shared-libraries-on-WSL" class="headerlink" title="Error while loading shared libraries on WSL"></a>Error while loading shared libraries on WSL</h3><p>There are many errors like this:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">/mnt/d/mles-pc/node_modules/electron/dist/electron: error <span class="token keyword">while</span> loading shared libraries: libnss3.so: cannot <span class="token function">open</span> shared object file: No such <span class="token function">file</span> or directory
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>The libraries are <code>libnss3.so, libgtk-3.so.0, libX11-xcb.so.1, libasound.so.2</code>.</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># https://github.com/Microsoft/vscode/issues/1694</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libnss3-dev
+<span class="token comment" spellcheck="true"># https://github.com/cazala/coin-hive/issues/22</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libgtk-3-0
+<span class="token comment" spellcheck="true"># https://www.howtoinstall.co/en/ubuntu/trusty/main/libx11-xcb-dev/</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libx11-xcb-dev
+<span class="token comment" spellcheck="true"># https://askubuntu.com/questions/482478/libasound-so-2-cannot-open-shared-object-file-no-such-file-or-directory</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libasound2
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Zh-cn-character-not-show-on-WSL-GUI-Xming"><a href="#Zh-cn-character-not-show-on-WSL-GUI-Xming" class="headerlink" title="Zh-cn character not show on WSL GUI Xming"></a>Zh-cn character not show on WSL GUI Xming</h3><p>Not solved yet.</p>
 <hr>
+<p>Refer:</p>
 <p>Related:<br><a href="/2019/03/04/Package-Your-Electron-App/">Electron应用打包</a></p>
 
           </div>
