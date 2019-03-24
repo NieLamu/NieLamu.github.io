@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Your commit message is: $1
-cd themes/Material-T/
+cd themes/Hexo-Material-N/
 git checkout master
 git add .
 git commit -m "$1"
