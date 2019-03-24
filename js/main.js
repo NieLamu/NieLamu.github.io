@@ -40,7 +40,7 @@ $(document).ready(() => {
 $(document).ready(function () {
     // copy from https://github.com/fi3ework/hexo-theme-archer
     var logStyle = 'color: #fff; background: #00bcd4; padding: 5px; border-radius: 5px;'
-    console.log('%c 🎯 Material-N', logStyle)
-    console.log('%c 🏷 Version: 2.0.0 ', logStyle)
-    console.log('%c 📦 https://github.com/NieLamu/Material-N ', logStyle)
+    console.log('%c 🎯 Hexo-Material-N', logStyle)
+    console.log('%c 🏷 Version: 2.0.0', logStyle)
+    console.log('%c 📦 https://github.com/NieLamu/Hexo-Material-N', logStyle)
 }) 
