@@ -20,6 +20,7 @@ $(document).ready(() => {
     const typeEle = $(`.${cls}`);
     const sentence = typeEle.text();
     const len = sentence.length;
+    if (len === 0) return;
     let letters = '', index = 0;
     typeEle.text(letters); 
     typeEle.css('display', 'block');
@@ -38,8 +39,8 @@ $(document).ready(() => {
 
 $(document).ready(function () {
     // copy from https://github.com/fi3ework/hexo-theme-archer
-    var logStyle = 'color: #fff; background: #f75357; padding: 1px; border-radius: 5px;'
-    console.log('%c 🎯 Material-T', logStyle)
-    console.log('%c 🏷 Version: 0.9.1 ', logStyle)
-    console.log('%c 📦 https://github.com/invom/Material-T ', logStyle)
+    var logStyle = 'color: #fff; background: #00bcd4; padding: 5px; border-radius: 5px;'
+    console.log('%c 🎯 Material-N', logStyle)
+    console.log('%c 🏷 Version: 2.0.0 ', logStyle)
+    console.log('%c 📦 https://github.com/NieLamu/Material-N ', logStyle)
 }) 

@@ -9,7 +9,6 @@
 
 
 
-
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
@@ -22,19 +21,13 @@
     <meta name="theme-color" content="#00bcd4">
     <title>Package Electron App | Electron应用打包 ~ NieLamu | Blog</title>
 
-    <!--     Fonts and icons     -->
-    <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
     <!-- Material Kit CSS -->
     <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
-    <!-- MyFontsWebfontsKit -->
-    <link href="/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
-
-
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body class=" sidebar-collapse">
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="/">
@@ -96,50 +89,49 @@
     </div>
 </nav>
     
-  
-  <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
-    <div class="page-header-content">
-      <div class="container">
-        <h1 class="title text-center post_title">Package Electron App | Electron应用打包</h1>
-        <p class="text-center">
-          Created: <b>2019-03-04</b> |
-          Updated: <b>2019-03-23</b> |
-          Author: <b>NieLamu</b>
-        </p>
-        <p class="text-center">
-          
-            <a class="badge" href="/tags/Electron">#Electron</a>
-          
-          
-            <a class="badge" href="/categories/Programming">>Programming</a>
-          
-            <a class="badge" href="/categories/Electron">>Electron</a>
-          
-        </p>
-      </div>
+    
+    <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
+        <div class="page-header-content">
+            <div class="container">
+                <h1 class="title text-center post_title">Package Electron App | Electron应用打包</h1>
+                <p class="text-center">
+                    Created: <b>2019-03-04</b> |
+                    Updated: <b>2019-03-23</b> |
+                    Author: <b>NieLamu</b>
+                </p>
+                <p class="text-center">
+                    
+                    <a class="badge" href="/tags/Electron">#Electron</a>
+                    
+                    
+                    <a class="badge" href="/categories/Programming">>Programming</a>
+                    
+                    <a class="badge" href="/categories/Electron">>Electron</a>
+                    
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  
+    
 
 
-  
-  
+    
     
 
 
 
 <div class="main main-raised">
-  <div class="container">
-    
-    <div class="section post_img_section">
-      <div class="post_banner_img_container">
-        <a style="background-image: url('/img/electron-app.png');" href="/img/electron-app.png" target="_blank" class="post_banner_img"></a> 
-      </div>
-    
-      <div class="row">
-        <div class="col-md-8 offset-md-1">
-          <div class="post_content">
-            <p>使用Electron开发跨平台项目，将其打包成各平台可执行或可安装应用，一般有两种模块可以完成，即<a href="https://github.com/electron-userland/electron-packager" target="_blank" rel="noopener">electron-packager</a>和<a href="https://github.com/electron-userland/electron-builder" target="_blank" rel="noopener">electron-builder</a>，建议使用electron-builder。</p>
+    <div class="container">
+        
+        <div class="section post_img_section">
+            <div class="post_banner_img_container">
+                <a style="background-image: url('/img/electron-app.png');" href="/img/electron-app.png" target="_blank" class="post_banner_img"></a>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-8 offset-md-1">
+                    <div class="post_content">
+                        <p>使用Electron开发跨平台项目，将其打包成各平台可执行或可安装应用，一般有两种模块可以完成，即<a href="https://github.com/electron-userland/electron-packager" target="_blank" rel="noopener">electron-packager</a>和<a href="https://github.com/electron-userland/electron-builder" target="_blank" rel="noopener">electron-builder</a>，建议使用electron-builder。</p>
 <h2 id="electron-packager"><a href="#electron-packager" class="headerlink" title="electron-packager"></a>electron-packager</h2><p>electron-packager的可配置项比较少，可打包类型也比较少。</p>
 <h2 id="electron-builder"><a href="#electron-builder" class="headerlink" title="electron-builder"></a>electron-builder</h2><p>electron-builder配置项非常丰富，具体使用可查阅<a href="https://www.electron.build/" target="_blank" rel="noopener">官方文档</a>。</p>
 <h3 id="打包到Windows"><a href="#打包到Windows" class="headerlink" title="打包到Windows"></a>打包到Windows</h3><h4 id="nsis-web包类型-recommended"><a href="#nsis-web包类型-recommended" class="headerlink" title="nsis-web包类型(recommended)"></a>nsis-web包类型(recommended)</h4><p>以目标平台为Windows为例，nsis-web形式包含一个几百kb的通用安装包(.exe)和x64、x86架构下相应的软件包(.7z)。</p>
@@ -202,60 +194,63 @@ npm run release</code>.</li>
 </a><br>[2]<a href="https://www.luffysama.com/2018/09/08/electron-nsis-web/" target="_blank" rel="noopener">Electron Nsis Web 安装包配置方法</a></p>
 <p>Related:</p>
 
-          </div>
-        </div>
-        <!-- TOC -->
-        
-  <div id="toc">
-    <p class="toc-title"><ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC</p> 
+                    </div>
+                </div>
+                <!-- TOC -->
+                
+<div id="toc">
+    <p class="toc-title">
+        <ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC
+    </p>
     <div id="tocbot"></div>
-  </div>
-  
-
-      </div>
-    </div>
-  </div>
 </div>
 
-
+            </div>
+        </div>
+    </div>
+</div>
 
 <br>
 <!-- Comments -->
 <div class="comments" id="comments">
 
 </div>
-  
+    
 
-  <footer class="footer footer-default">
-  <div class="container">
-    <div class="float-left" style="padding: 15px 0;">
-        
+    <footer class="footer footer-default">
+    <div class="container">
+        <div class="copyright float-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X
+            <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
+            <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
+        </div>
     </div>
-    <div class="copyright float-right">
-      &copy;
-      <script>
-        document.write(new Date().getFullYear())
-      </script>
-      <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X 
-      <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
-      <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
-    </div>
-  </div>
 </footer>
-
 
 <script src="/js/core/jquery.min.js" type="text/javascript"></script>
 <script src="/js/core/popper.min.js" type="text/javascript"></script>
 <script src="/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
 <script src="/js/core/material-kit.min.js?v=2.0.5" type="text/javascript"></script>
+<!--     Fonts and icons     -->
+<script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
 
 <script src="/js/main.js" type="text/javascript"></script>
 <link href="/css/main.css" rel="stylesheet">
+<!-- MyFontsWebfontsKit -->
+<link href="/css/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+    $(':root').css('--bgColor', '#00bcd4')
+</script>
 
 
-  <script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
-  <script src="/js/post.js"></script>
-  <link rel="stylesheet" href="/css/post.css">
+<script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
+<script src="/js/post.js" type="text/javascript"></script>
+<link href="/css/post.css" rel="stylesheet">
 
 </body>
 

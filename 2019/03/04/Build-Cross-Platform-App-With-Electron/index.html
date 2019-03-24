@@ -9,7 +9,6 @@
 
 
 
-
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
@@ -22,19 +21,13 @@
     <meta name="theme-color" content="#00bcd4">
     <title>Build Cross Platform App With Electron ~ NieLamu | Blog</title>
 
-    <!--     Fonts and icons     -->
-    <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
     <!-- Material Kit CSS -->
     <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
-    <!-- MyFontsWebfontsKit -->
-    <link href="/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
-
-
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body class=" sidebar-collapse">
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="/">
@@ -96,50 +89,49 @@
     </div>
 </nav>
     
-  
-  <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
-    <div class="page-header-content">
-      <div class="container">
-        <h1 class="title text-center post_title">Build Cross Platform App With Electron</h1>
-        <p class="text-center">
-          Created: <b>2019-03-04</b> |
-          Updated: <b>2019-03-23</b> |
-          Author: <b>NieLamu</b>
-        </p>
-        <p class="text-center">
-          
-            <a class="badge" href="/tags/Electron">#Electron</a>
-          
-          
-            <a class="badge" href="/categories/Programming">>Programming</a>
-          
-            <a class="badge" href="/categories/Electron">>Electron</a>
-          
-        </p>
-      </div>
+    
+    <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
+        <div class="page-header-content">
+            <div class="container">
+                <h1 class="title text-center post_title">Build Cross Platform App With Electron</h1>
+                <p class="text-center">
+                    Created: <b>2019-03-04</b> |
+                    Updated: <b>2019-03-23</b> |
+                    Author: <b>NieLamu</b>
+                </p>
+                <p class="text-center">
+                    
+                    <a class="badge" href="/tags/Electron">#Electron</a>
+                    
+                    
+                    <a class="badge" href="/categories/Programming">>Programming</a>
+                    
+                    <a class="badge" href="/categories/Electron">>Electron</a>
+                    
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  
+    
 
 
-  
-  
+    
     
 
 
 
 <div class="main main-raised">
-  <div class="container">
-    
-    <div class="section post_img_section">
-      <div class="post_banner_img_container">
-        <a style="background-image: url('/img/electron-logo.png');" href="/img/electron-logo.png" target="_blank" class="post_banner_img"></a> 
-      </div>
-    
-      <div class="row">
-        <div class="col-md-8 offset-md-1">
-          <div class="post_content">
-            <h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><h3 id="Can-not-use-jQuery-RequireJS-Meteor-AngularJS-in-Electron"><a href="#Can-not-use-jQuery-RequireJS-Meteor-AngularJS-in-Electron" class="headerlink" title="Can not use jQuery/RequireJS/Meteor/AngularJS in Electron"></a>Can not use jQuery/RequireJS/Meteor/AngularJS in Electron</h3><p>Electron<br>According to <a href="https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron" target="_blank" rel="noopener"> FAQ</a>, you can use this:</p>
+    <div class="container">
+        
+        <div class="section post_img_section">
+            <div class="post_banner_img_container">
+                <a style="background-image: url('/img/electron-logo.png');" href="/img/electron-logo.png" target="_blank" class="post_banner_img"></a>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-8 offset-md-1">
+                    <div class="post_content">
+                        <h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><h3 id="Can-not-use-jQuery-RequireJS-Meteor-AngularJS-in-Electron"><a href="#Can-not-use-jQuery-RequireJS-Meteor-AngularJS-in-Electron" class="headerlink" title="Can not use jQuery/RequireJS/Meteor/AngularJS in Electron"></a>Can not use jQuery/RequireJS/Meteor/AngularJS in Electron</h3><p>Electron<br>According to <a href="https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron" target="_blank" rel="noopener"> FAQ</a>, you can use this:</p>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
 window<span class="token punctuation">.</span>nodeRequire <span class="token operator">=</span> require<span class="token punctuation">;</span>
@@ -181,60 +173,63 @@ window<span class="token punctuation">.</span>nodeRequire <span class="token ope
 <p>Refer:</p>
 <p>Related:<br><a href="/2019/03/04/Package-Your-Electron-App/">Electron应用打包</a></p>
 
-          </div>
-        </div>
-        <!-- TOC -->
-        
-  <div id="toc">
-    <p class="toc-title"><ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC</p> 
+                    </div>
+                </div>
+                <!-- TOC -->
+                
+<div id="toc">
+    <p class="toc-title">
+        <ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC
+    </p>
     <div id="tocbot"></div>
-  </div>
-  
-
-      </div>
-    </div>
-  </div>
 </div>
 
-
+            </div>
+        </div>
+    </div>
+</div>
 
 <br>
 <!-- Comments -->
 <div class="comments" id="comments">
 
 </div>
-  
+    
 
-  <footer class="footer footer-default">
-  <div class="container">
-    <div class="float-left" style="padding: 15px 0;">
-        
+    <footer class="footer footer-default">
+    <div class="container">
+        <div class="copyright float-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X
+            <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
+            <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
+        </div>
     </div>
-    <div class="copyright float-right">
-      &copy;
-      <script>
-        document.write(new Date().getFullYear())
-      </script>
-      <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X 
-      <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
-      <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
-    </div>
-  </div>
 </footer>
-
 
 <script src="/js/core/jquery.min.js" type="text/javascript"></script>
 <script src="/js/core/popper.min.js" type="text/javascript"></script>
 <script src="/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
 <script src="/js/core/material-kit.min.js?v=2.0.5" type="text/javascript"></script>
+<!--     Fonts and icons     -->
+<script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
 
 <script src="/js/main.js" type="text/javascript"></script>
 <link href="/css/main.css" rel="stylesheet">
+<!-- MyFontsWebfontsKit -->
+<link href="/css/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+    $(':root').css('--bgColor', '#00bcd4')
+</script>
 
 
-  <script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
-  <script src="/js/post.js"></script>
-  <link rel="stylesheet" href="/css/post.css">
+<script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
+<script src="/js/post.js" type="text/javascript"></script>
+<link href="/css/post.css" rel="stylesheet">
 
 </body>
 

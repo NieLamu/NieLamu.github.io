@@ -67,12 +67,6 @@ $(document).ready(()=> {
 
 // heading点击滚动效果
 $(document).ready(()=> {
-    // $('.post_content h1,h2,h3,h4,h5,h6').on('mouseenter', (e) => {
-    //     $(`#${e.target.id}`).addClass('titleActive')
-    // })
-    // $('.post_content h1,h2,h3,h4,h5,h6').on('mouseleave', (e) => {
-    //     $(`#${e.target.id}`).removeClass('titleActive')
-    // })
     $('.post_content h1,h2,h3,h4,h5,h6').click((e) => {
         $('html,body').animate({ scrollTop: $(`#${e.target.id}`).offset().top }, 500);
     });
@@ -86,6 +80,7 @@ $(document).ready(() => {
     canvas.style.display = 'none';
     // Get image source
     const imgSrc = $('.post_banner_img_container a').attr('href');
+    if (!imgSrc) return;
     // Create an image element
     const img = new Image();
     img.src = imgSrc;
@@ -99,7 +94,12 @@ $(document).ready(() => {
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         // Get image pixel data
-        const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        let data;
+        try {
+            data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        } catch {
+            return;
+        }
         let pixels = [0, 0, 0, 0], index = 0;
         const len = data.length;
         for (let i = 0, offset, r, g, b, a; i < len / 4; i++) {

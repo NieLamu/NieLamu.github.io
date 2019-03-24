@@ -9,7 +9,6 @@
 
 
 
-
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
@@ -22,19 +21,13 @@
     <meta name="theme-color" content="#00bcd4">
     <title>Merge Two Branches From Two Git Projects ~ NieLamu | Blog</title>
 
-    <!--     Fonts and icons     -->
-    <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
     <!-- Material Kit CSS -->
     <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
-    <!-- MyFontsWebfontsKit -->
-    <link href="/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
-
-
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body class=" sidebar-collapse">
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="/">
@@ -96,47 +89,46 @@
     </div>
 </nav>
     
-  
-  <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
-    <div class="page-header-content">
-      <div class="container">
-        <h1 class="title text-center post_title">Merge Two Branches From Two Git Projects</h1>
-        <p class="text-center">
-          Created: <b>2019-02-15</b> |
-          Updated: <b>2019-03-23</b> |
-          Author: <b>NieLamu</b>
-        </p>
-        <p class="text-center">
-          
-            <a class="badge" href="/tags/Git">#Git</a>
-          
-          
-            <a class="badge" href="/categories/Programming">>Programming</a>
-          
-            <a class="badge" href="/categories/Git">>Git</a>
-          
-        </p>
-      </div>
+    
+    <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
+        <div class="page-header-content">
+            <div class="container">
+                <h1 class="title text-center post_title">Merge Two Branches From Two Git Projects</h1>
+                <p class="text-center">
+                    Created: <b>2019-02-15</b> |
+                    Updated: <b>2019-03-23</b> |
+                    Author: <b>NieLamu</b>
+                </p>
+                <p class="text-center">
+                    
+                    <a class="badge" href="/tags/Git">#Git</a>
+                    
+                    
+                    <a class="badge" href="/categories/Programming">>Programming</a>
+                    
+                    <a class="badge" href="/categories/Git">>Git</a>
+                    
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  
+    
 
 
-  
-  
+    
     
 
 
 
 <div class="main main-raised">
-  <div class="container">
-    
-    <div class="section">
-    
-      <div class="row">
-        <div class="col-md-8 offset-md-1">
-          <div class="post_content">
-            <p>We have one git project that references another project. After some commits, we want to fork the reference project and merge the commits of the two projects.<br>The branches of the two projects are as follows:</p>
+    <div class="container">
+        
+        <div class="section">
+        
+            <div class="row">
+                <div class="col-md-8 offset-md-1">
+                    <div class="post_content">
+                        <p>We have one git project that references another project. After some commits, we want to fork the reference project and merge the commits of the two projects.<br>The branches of the two projects are as follows:</p>
 <pre><code>ourProject -&gt; develop
 forkedProject -&gt; master
 </code></pre><p>We need merge <code>master</code> branch of <code>forkedProject</code> to <code>develop</code> branch of <code>ourProject</code>.</p>
@@ -155,60 +147,63 @@ forkedProject -&gt; master
 <p>Refer:<br>[1]<a href="https://blog.csdn.net/zh_1191/article/details/79036608" target="_blank" rel="noopener">同一工程中，合并两个git项目内容</a></p>
 <p>Related:</p>
 
-          </div>
-        </div>
-        <!-- TOC -->
-        
-  <div id="toc">
-    <p class="toc-title"><ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC</p> 
+                    </div>
+                </div>
+                <!-- TOC -->
+                
+<div id="toc">
+    <p class="toc-title">
+        <ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC
+    </p>
     <div id="tocbot"></div>
-  </div>
-  
-
-      </div>
-    </div>
-  </div>
 </div>
 
-
+            </div>
+        </div>
+    </div>
+</div>
 
 <br>
 <!-- Comments -->
 <div class="comments" id="comments">
 
 </div>
-  
+    
 
-  <footer class="footer footer-default">
-  <div class="container">
-    <div class="float-left" style="padding: 15px 0;">
-        
+    <footer class="footer footer-default">
+    <div class="container">
+        <div class="copyright float-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X
+            <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
+            <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
+        </div>
     </div>
-    <div class="copyright float-right">
-      &copy;
-      <script>
-        document.write(new Date().getFullYear())
-      </script>
-      <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X 
-      <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
-      <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
-    </div>
-  </div>
 </footer>
-
 
 <script src="/js/core/jquery.min.js" type="text/javascript"></script>
 <script src="/js/core/popper.min.js" type="text/javascript"></script>
 <script src="/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
 <script src="/js/core/material-kit.min.js?v=2.0.5" type="text/javascript"></script>
+<!--     Fonts and icons     -->
+<script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
 
 <script src="/js/main.js" type="text/javascript"></script>
 <link href="/css/main.css" rel="stylesheet">
+<!-- MyFontsWebfontsKit -->
+<link href="/css/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+    $(':root').css('--bgColor', '#00bcd4')
+</script>
 
 
-  <script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
-  <script src="/js/post.js"></script>
-  <link rel="stylesheet" href="/css/post.css">
+<script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
+<script src="/js/post.js" type="text/javascript"></script>
+<link href="/css/post.css" rel="stylesheet">
 
 </body>
 

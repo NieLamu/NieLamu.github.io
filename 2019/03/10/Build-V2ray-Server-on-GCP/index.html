@@ -9,7 +9,6 @@
 
 
 
-
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
@@ -22,19 +21,13 @@
     <meta name="theme-color" content="#00bcd4">
     <title>Build V2ray Server on GCP | 在GCP上搭建v2ray服务 ~ NieLamu | Blog</title>
 
-    <!--     Fonts and icons     -->
-    <script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
     <!-- Material Kit CSS -->
     <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
-    <!-- MyFontsWebfontsKit -->
-    <link href="/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
-
-
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body class=" sidebar-collapse">
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="/">
@@ -96,48 +89,47 @@
     </div>
 </nav>
     
-  
-  <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
-    <div class="page-header-content">
-      <div class="container">
-        <h1 class="title text-center post_title">Build V2ray Server on GCP | 在GCP上搭建v2ray服务</h1>
-        <p class="text-center">
-          Created: <b>2019-03-10</b> |
-          Updated: <b>2019-03-19</b> |
-          Author: <b>NieLamu</b>
-        </p>
-        <p class="text-center">
-          
-            <a class="badge" href="/tags/Programming">#Programming</a>
-          
-          
-            <a class="badge" href="/categories/Programming">>Programming</a>
-          
-        </p>
-      </div>
+    
+    <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
+        <div class="page-header-content">
+            <div class="container">
+                <h1 class="title text-center post_title">Build V2ray Server on GCP | 在GCP上搭建v2ray服务</h1>
+                <p class="text-center">
+                    Created: <b>2019-03-10</b> |
+                    Updated: <b>2019-03-19</b> |
+                    Author: <b>NieLamu</b>
+                </p>
+                <p class="text-center">
+                    
+                    <a class="badge" href="/tags/Programming">#Programming</a>
+                    
+                    
+                    <a class="badge" href="/categories/Programming">>Programming</a>
+                    
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  
+    
 
 
-  
-  
+    
     
 
 
 
 <div class="main main-raised">
-  <div class="container">
-    
-    <div class="section post_img_section">
-      <div class="post_banner_img_container">
-        <a style="background-image: url('/img/google-cloud-logo.png');" href="/img/google-cloud-logo.png" target="_blank" class="post_banner_img"></a> 
-      </div>
-    
-      <div class="row">
-        <div class="col-md-8 offset-md-1">
-          <div class="post_content">
-            <p>截至2019年3月，<a href="https://bandwagonhost.com" target="_blank" rel="noopener">搬瓦工</a>的openVZ架构VPS全部下线，最低价$49.99/yr的服务器也卖光了。在vultr上为公司搭建的Shadowsocks服务又导致IP经常被封（正值x会期间），实在折腾不起，所以转投GCP(Google Cloud Platform)。</p>
+    <div class="container">
+        
+        <div class="section post_img_section">
+            <div class="post_banner_img_container">
+                <a style="background-image: url('/img/google-cloud-logo.png');" href="/img/google-cloud-logo.png" target="_blank" class="post_banner_img"></a>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-8 offset-md-1">
+                    <div class="post_content">
+                        <p>截至2019年3月，<a href="https://bandwagonhost.com" target="_blank" rel="noopener">搬瓦工</a>的openVZ架构VPS全部下线，最低价$49.99/yr的服务器也卖光了。在vultr上为公司搭建的Shadowsocks服务又导致IP经常被封（正值x会期间），实在折腾不起，所以转投GCP(Google Cloud Platform)。</p>
 <p>GCP使用外币信用卡开通可享受含300美元赠金的12个月免费试用，<a href="https://cloud.google.com/free/docs/gcp-free-tier#how-to-upgrade" target="_blank" rel="noopener">系统会在您的免费赠金用完或过期（二者取其先）后向您收取费用</a>。</p>
 <h2 id="创建和配置Computer-Engine实例"><a href="#创建和配置Computer-Engine实例" class="headerlink" title="创建和配置Computer Engine实例"></a>创建和配置Computer Engine实例</h2><h3 id="创建实例"><a href="#创建实例" class="headerlink" title="创建实例"></a>创建实例</h3><p>Computer Engine相当于阿里云的ECS，也就是虚拟机（服务器），可以根据需求选择配置。</p>
 <p>如果身在中国大陆，区域最好选择asia-east1（台湾），地区选择asia-east1-a或asia-east1-c。机器类型根据需求选择，一般不作它用时最低配置即可。</p>
@@ -241,60 +233,63 @@ PermitRootLogin yes
 <hr>
 <p>Refer:<br>[1]<a href="https://suiyuanjian.com/124.html" target="_blank" rel="noopener">使用Google Cloud Platform(GCP GCE)安装SSR+BBR教程</a></p>
 
-          </div>
-        </div>
-        <!-- TOC -->
-        
-  <div id="toc">
-    <p class="toc-title"><ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC</p> 
+                    </div>
+                </div>
+                <!-- TOC -->
+                
+<div id="toc">
+    <p class="toc-title">
+        <ion-icon name="bookmark" size="large"></ion-icon>&nbsp;TOC
+    </p>
     <div id="tocbot"></div>
-  </div>
-  
-
-      </div>
-    </div>
-  </div>
 </div>
 
-
+            </div>
+        </div>
+    </div>
+</div>
 
 <br>
 <!-- Comments -->
 <div class="comments" id="comments">
 
 </div>
-  
+    
 
-  <footer class="footer footer-default">
-  <div class="container">
-    <div class="float-left" style="padding: 15px 0;">
-        
+    <footer class="footer footer-default">
+    <div class="container">
+        <div class="copyright float-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X
+            <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
+            <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
+        </div>
     </div>
-    <div class="copyright float-right">
-      &copy;
-      <script>
-        document.write(new Date().getFullYear())
-      </script>
-      <a href="https://github.com/NieLamu" target="_blank">NieLamu</a> X 
-      <a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>
-      <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
-    </div>
-  </div>
 </footer>
-
 
 <script src="/js/core/jquery.min.js" type="text/javascript"></script>
 <script src="/js/core/popper.min.js" type="text/javascript"></script>
 <script src="/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
 <script src="/js/core/material-kit.min.js?v=2.0.5" type="text/javascript"></script>
+<!--     Fonts and icons     -->
+<script src="https://cdn.bootcss.com/ionicons/4.4.8/ionicons.js"></script>
 
 <script src="/js/main.js" type="text/javascript"></script>
 <link href="/css/main.css" rel="stylesheet">
+<!-- MyFontsWebfontsKit -->
+<link href="/css/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+    $(':root').css('--bgColor', '#00bcd4')
+</script>
 
 
-  <script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
-  <script src="/js/post.js"></script>
-  <link rel="stylesheet" href="/css/post.css">
+<script src="/js/plugins/tocbot.min.js" type="text/javascript"></script>
+<script src="/js/post.js" type="text/javascript"></script>
+<link href="/css/post.css" rel="stylesheet">
 
 </body>
 
