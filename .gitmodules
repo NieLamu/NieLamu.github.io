@@ -1,6 +1,6 @@
-[submodule "themes/Material-T"]
-	path = themes/Material-T
-	url = https://github.com/NieLamu/Material-T
 [submodule "themes/next"]
 	path = themes/next
 	url = https://github.com/theme-next/hexo-theme-next.git
+[submodule "themes/Hexo-Material-N"]
+	path = themes/Hexo-Material-N
+	url = https://github.com/NieLamu/Hexo-Material-N.git

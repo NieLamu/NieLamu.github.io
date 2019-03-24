@@ -7,14 +7,6 @@ tags:
 date: 2019-03-23 15:02:54
 ---
 
-
-
-----
-
-Refer:
-
-Related:
-
 Here we start use Xming as Gui on WSL.
 
 ## Configuration on WSL
