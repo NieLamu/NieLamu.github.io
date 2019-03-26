@@ -4,7 +4,16 @@
 ## Commands
 
 ```bash
+# Generate
 npx hexo clean && npx hexo g
-npx hexo serve --draft
+# or
+npm run g
+# Serve
+npx hexo s --draft
+# Deploy
 npx hexo d -m ""
+# or
+./d.sh ""
+# or
+npm run d ""
 ```
