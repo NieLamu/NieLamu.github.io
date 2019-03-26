@@ -77,7 +77,6 @@ $(document).ready(()=> {
 $(document).ready(() => {
     // Create an invisible canvas
     const canvas = document.createElement("canvas");
-    canvas.style.display = 'none';
     // Get image source
     const imgSrc = $('.post_banner_img_container a').attr('href');
     if (!imgSrc) return;
@@ -100,7 +99,7 @@ $(document).ready(() => {
         } catch {
             return;
         }
-        let pixels = [0, 0, 0, 0], index = 0;
+        let pixels = {r: 0, g: 0, b: 0, a: 0, index: 0};
         const len = data.length;
         for (let i = 0, offset, r, g, b, a; i < len / 4; i++) {
             offset = i * 4;
@@ -110,19 +109,19 @@ $(document).ready(() => {
             a = data[offset + 3];
             // If pixel is mostly opaque and not white
             if (a >= 125 && !(r > 250 && g > 250 && b > 250)) {
-                pixels[0] += r;
-                pixels[1] += g;
-                pixels[2] += b;
-                pixels[3] += a;
-                index++;
+                pixels.r += r;
+                pixels.g += g;
+                pixels.b += b;
+                pixels.a += a;
+                pixels.index++;
             }
         }
-        for (let i = 0; i < 4; i++) {
-            pixels[i] = parseInt(pixels[i] / index);
+        for (let i in pixels) {
+            pixels[i] = parseInt(pixels[i] / pixels.index);
         }
-        const rgb = `rgb(${pixels[0]}, ${pixels[1]}, ${pixels[2]})`;
+        const rgb = `rgb(${pixels.r}, ${pixels.g}, ${pixels.b})`;
         $('.page-header').css('background-color', rgb)
-        const hex = "#" + ((1 << 24) + (pixels[0] << 16) + (pixels[1] << 8) + pixels[2]).toString(16).slice(1);
-        $("meta[name='theme-color']").attr('content', hex);
+        const hex = "#" + ((1 << 24) + (pixels.r << 16) + (pixels.g << 8) + pixels.b).toString(16).slice(1);
+        $("meta[name='theme-color']").attr('content', rgb);
     }
 })
