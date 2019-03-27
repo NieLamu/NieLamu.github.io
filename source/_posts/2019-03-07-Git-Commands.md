@@ -192,6 +192,12 @@ git tag -d tagName
 git push origin :refs/tags/tagName
 ```
 
+## Command saving your life
+
+```bash
+git reflog
+```
+
 ## Git 命令速查表<sup>[∞]</sup>
 {% pdf "Git命令速查表v2.pdf" %}
 
