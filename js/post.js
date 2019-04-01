@@ -51,14 +51,19 @@ $(document).ready(()=> {
             + `</div>`
         );
         $('body').addClass('disableScroll');
-        $('.navbar').addClass('opacity0');
+        $('.navbar').addClass('barHidden');
 
         $('#fullImgBackground').one('click', function (e) {
-            $('#fullImgBackground').remove();
-            $('body').removeClass('disableScroll');
-            $('.navbar').removeClass('opacity0');
+            console.log('ba', e)
+
         });
         $('#fullImgBackground img').one('click', function (e) {
+
+            console.log('im', e)
+            $('#fullImgBackground').remove();
+            $('body').removeClass('disableScroll');
+            $('.navbar').removeClass('barHidden');
+
             e.stopPropagation();
         });
     });
