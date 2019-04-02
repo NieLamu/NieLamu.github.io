@@ -5,7 +5,7 @@
 
 
 .page-header {
-    transition: background-color 1.5s;
+    transition: background-color 1s;
 }
 .page-header-content {
     display: flex;
@@ -161,6 +161,8 @@ h6:hover:before {
 
 /* 图片放大 */
 #fullImgBackground {
+    --scale: 1;
+    --origin: 50% 50%;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -177,8 +179,9 @@ h6:hover:before {
     max-height: 100%;
     z-index: 2;
     border-radius: .3125rem;
-    transition: all 0.6s;
+    transition: all 0.3s;
     cursor: zoom-out;
+    transform: scale(1.0);
 }
 .disableScroll {
     overflow: hidden; 

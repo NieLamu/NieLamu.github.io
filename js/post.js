@@ -44,27 +44,47 @@ $(document).ready(function () {
 
 // 全屏大图效果
 $(document).ready(()=> {
-    $('.post_content img').on('click', function (e) {
-        $('body').append(
-            `<div id='fullImgBackground'>`
+
+    const body = $('body');
+    const navbar = $('.navbar');
+    const post_content_img = $('.post_content img');
+    post_content_img.on('click', function (e) {
+        body.append(
+            `<div id='fullImgBackground' onselectstart="return false;">`
             + `<img src='${e.target.src}'>`
             + `</div>`
         );
-        $('body').addClass('disableScroll');
-        $('.navbar').addClass('barHidden');
+        body.addClass('disableScroll');
+        navbar.addClass('barHidden');
 
-        $('#fullImgBackground').one('click', function (e) {
-            console.log('ba', e)
-
+        let bgClicked = {
+            num: 0,
+            timer: null,
+            scale: 1
+        };
+        const fullImgBackground = $('#fullImgBackground');
+        const fullImgBackground_img = $('#fullImgBackground img');
+        // fullImgBackground.onselectstart = function () { return false; };
+        fullImgBackground.on('click', function (e) {
+            if (!!bgClicked.timer) {
+                clearTimeout(bgClicked.timer);
+                bgClicked.timer = null;
+            }
+            bgClicked.num ++;
+            if (bgClicked.num === 2) {
+                bgClicked.num = 0;
+                bgClicked.scale = parseInt(bgClicked.scale * 10) === (1 + 0.5*2)*10? 1:bgClicked.scale+0.5;
+                fullImgBackground_img.css('transform', `scale(${bgClicked.scale})`)
+            } else {
+                bgClicked.timer = setTimeout(() => {
+                    fullImgBackground.remove();
+                    body.removeClass('disableScroll');
+                    navbar.removeClass('barHidden');
+                }, 250)
+            }
         });
-        $('#fullImgBackground img').one('click', function (e) {
+        fullImgBackground_img.one('click', function (e) {
 
-            console.log('im', e)
-            $('#fullImgBackground').remove();
-            $('body').removeClass('disableScroll');
-            $('.navbar').removeClass('barHidden');
-
-            e.stopPropagation();
         });
     });
 })
