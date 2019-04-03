@@ -190,6 +190,8 @@ git push origin --tags
 git tag -d tagName
 # Delete remote tag
 git push origin :refs/tags/tagName
+# Rename a tag
+git tag newTag oldTag
 ```
 
 ## Command saving your life
