@@ -9,6 +9,11 @@ date: 2019-03-19 18:28:07
 
 ```bash
 
+动态添加数据
+Vue.set(vm.stu, 'gender', 'male')
+vm.stu = Object.assign({}, vm.stu, { gender: 'female', height: 180 })
+
+
 Mustache语法`{{}}`
 文本插值
 单向绑定，从数据对象`data`中获取数据
@@ -17,6 +22,9 @@ Mustache语法`{{}}`
 
 v-once
 使Mustache只作用一次
+
+v-text
+绑定textContent
 
 v-html
 绑定html片段
