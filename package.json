@@ -7,7 +7,7 @@
   },
   "scripts": {
     "g": "npx hexo clean && npx hexo g",
-    "d": "sh ./scripts/d.sh",
+    "d": "sh ./scripts/deploy.sh",
     "subrepos": "sh ./scripts/subrepos.sh"
   },
   "dependencies": {
