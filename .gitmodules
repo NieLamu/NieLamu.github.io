@@ -4,3 +4,6 @@
 [submodule "themes/Hexo-Material-N"]
 	path = themes/Hexo-Material-N
 	url = https://github.com/NieLamu/Hexo-Material-N.git
+[submodule "source/subRepos/2019-04-16-Awesome-GitHub-Repos"]
+	path = source/subRepos/2019-04-16-Awesome-GitHub-Repos
+	url = https://github.com/NieLamu/awesome-GitHub-Repos.git

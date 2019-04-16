@@ -1,4 +1,5 @@
 #!/bin/bash
+trap "echo Exiting...;exit" SIGHUP SIGINT SIGQUIT SIGTERM
 echo Your commit message is: $1
 cd themes/Hexo-Material-N/
 git checkout master
