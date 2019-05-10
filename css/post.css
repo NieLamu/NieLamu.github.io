@@ -1,81 +1,79 @@
 .post_title {
-    display:block;
-    word-break:break-all; 
+  display: block;
+  word-break: break-all;
 }
-
 
 .page-header {
-    transition: background-color 1s;
+  transition: background-color 1s;
 }
 .page-header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    position: relative;
-    bottom: 15vh;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  position: relative;
+  bottom: 15vh;
+  width: 100%;
 }
 
 .page-header .badge {
-    font-size: .875rem;
-    text-transform: capitalize;
+  font-size: 0.875rem;
+  text-transform: capitalize;
 }
 
 .post_banner_img_container {
-    width: 80%;
-    left: 10%;
-    position: relative;
-    top: -15vh;
+  width: 80%;
+  left: 10%;
+  position: relative;
+  top: -15vh;
 }
 
-@media (max-width: 375px){
-    .post_banner_img_container {
-        width: 100%;
-        left: 0;
-    }
+@media (max-width: 375px) {
+  .post_banner_img_container {
+    width: 100%;
+    left: 0;
+  }
 }
 
 .post_img_section {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .post_banner_img {
-    height: 0;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    padding-top: 55%;
-    display: block;
-    border-radius: 1rem !important;
+  height: 0;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  padding-top: 55%;
+  display: block;
+  border-radius: 1rem !important;
 }
 
 .post_banner_img:hover {
-	box-shadow: 0rem 0rem 2rem var(--bgColor);
+  box-shadow: 0rem 0rem 2rem var(--bgColor);
 }
 
 .post_content {
-    word-break:break-all; 
-    padding: 0 .5rem 0;
+  word-break: break-all;
+  padding: 0 0.5rem 0;
 }
 
 .post_content p {
-    font-size: 1rem;
-    font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .post_content img {
-    cursor: zoom-in;
-    transition: .3s;
-    border-radius: .375rem;
-    max-width: 100%;
-    margin: 1.5rem auto;
-    display: block;
+  cursor: zoom-in;
+  transition: 0.3s;
+  border-radius: 0.375rem;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  display: block;
 }
 .post_content img:hover {
-	box-shadow: 0rem 0rem 2rem var(--bgColor);
+  box-shadow: 0rem 0rem 2rem var(--bgColor);
 }
-
 
 .post_content h1,
 h2,
@@ -83,9 +81,9 @@ h3,
 h4,
 h5,
 h6 {
-    /* pointer-events: none; */
-    font-weight: 600;
-    padding-top: 1rem;
+  /* pointer-events: none; */
+  font-weight: 600;
+  padding-top: 1rem;
 }
 
 .post_content h1:before,
@@ -94,10 +92,10 @@ h3:before,
 h4:before,
 h5:before,
 h6:before {
-    content: "➜";
-    cursor: pointer;
-    /* pointer-events: auto; */
-    color: var(--bgColor);
+  content: "➜";
+  cursor: pointer;
+  /* pointer-events: auto; */
+  color: var(--bgColor);
 }
 
 .post_content h1:hover:before,
@@ -106,120 +104,129 @@ h3:hover:before,
 h4:hover:before,
 h5:hover:before,
 h6:hover:before {
-    margin-right: 6px;
-    content: "✗"
+  margin-right: 6px;
+  content: "✗";
 }
 
+.post_content .awesome-repos-badge img {
+  cursor: auto;
+  border-radius: 0;
+  max-width: 100%;
+  margin: 0px 5px 0px 0px;
+  display: initial;
+}
+.post_content .awesome-repos-badge img:hover {
+  box-shadow: 0rem 0rem;
+}
 
 /* for tocbot */
 #toc {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-#tocbot>ol {
-    padding-left: 0;
+#tocbot > ol {
+  padding-left: 0;
 }
 
-.toc-title{
-    font-size: 1.5rem;
-    font-weight: 400;
+.toc-title {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-#tocbot ol{
-    list-style: none;
+#tocbot ol {
+  list-style: none;
 }
 
-.tocbot-list ol{
-    list-style: none;
-    padding-left: .9375rem;
+.tocbot-list ol {
+  list-style: none;
+  padding-left: 0.9375rem;
 }
 
-.tocbot-link{
-    color: #34495e;
+.tocbot-link {
+  color: #34495e;
 }
 
 .tocbot-active-link {
-    font-weight: 600;
-    color: var(--bgColor);
+  font-weight: 600;
+  color: var(--bgColor);
 }
 
 .tocbot-is-collapsible {
-    max-height: 62.5rem;
-    overflow: hidden;
-    transition: all 300ms ease-in-out;
+  max-height: 62.5rem;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
 }
 
 .tocbot-is-collapsed {
-    max-height: 0;
+  max-height: 0;
 }
 
-
 .comments {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* 图片放大 */
 #fullImgBackground {
-    --scale: 1;
-    --origin: 50% 50%;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: var(--bgColor);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  --scale: 1;
+  --origin: 50% 50%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--bgColor);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #fullImgBackground img {
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 2;
-    border-radius: .3125rem;
-    transition: all 0.3s;
-    cursor: zoom-out;
-    transform: scale(1.0);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 2;
+  border-radius: 0.3125rem;
+  transition: all 0.3s;
+  cursor: zoom-out;
+  transform: scale(1);
 }
 .disableScroll {
-    overflow: hidden; 
+  overflow: hidden;
 }
 .barHidden {
-    z-index: 0;
+  z-index: 0;
 }
 
-
+/* 表格 */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 14px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
 }
-table>tbody>tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
+table > tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
 }
-table>tbody>tr:hover {
-    background-color: #f5f5f5;
+table > tbody > tr:hover {
+  background-color: #f5f5f5;
 }
 caption,
 th,
 td {
-    padding: 8px;
-    text-align: left;
-    vertical-align: middle;
-    font-weight: normal;
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: normal;
 }
 th,
 td {
-    border: 1px solid #ddd;
-    border-bottom: 3px solid #ddd;
+  border: 1px solid #ddd;
+  border-bottom: 3px solid #ddd;
 }
 th {
-    padding-bottom: 10px;
-    font-weight: 700;
+  padding-bottom: 10px;
+  font-weight: 700;
 }
 td {
-    border-bottom-width: 1px;
+  border-bottom-width: 1px;
 }

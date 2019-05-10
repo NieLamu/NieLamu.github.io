@@ -96,7 +96,7 @@
                 <h1 class="title text-center post_title">Install GitLab CE on Ubuntu</h1>
                 <p class="text-center">
                     Created: <b>2019-02-21</b> |
-                    Updated: <b>2019-03-23</b> |
+                    Updated: <b>2019-05-10</b> |
                     Author: <b>NieLamu</b>
                 </p>
                 <p class="text-center">
@@ -152,13 +152,30 @@ unicorn['port'] = 8801
 <pre class="line-numbers language-bash"><code class="language-bash">gitlab-ctl reconfigure
 gitlab-ctl restart
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="Modify-root-user-password"><a href="#Modify-root-user-password" class="headerlink" title="Modify root user password"></a>Modify root user password</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> gitlab-rails console production
+In the console:
+<span class="token comment" spellcheck="true"># view all users</span>
+User.all
+<span class="token comment" spellcheck="true"># select root user</span>
+u<span class="token operator">=</span>User.where<span class="token punctuation">(</span>id:1<span class="token punctuation">)</span>.first
+<span class="token comment" spellcheck="true"># set and confirm password</span>
+u.password<span class="token operator">=</span><span class="token string">'12345678'</span>
+u.password_confirmation<span class="token operator">=</span><span class="token string">'12345678'</span>
+<span class="token comment" spellcheck="true"># save and exit</span>
+u.save<span class="token operator">!</span>
+quit
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Visit <code>http://localhost:9090</code>, you will be asked to set your password with user name <code>root</code>.</p>
 <p><img src="gitlab-welcome-page.png" alt="gitlab-welcome-page"></p>
 <h2 id="Some-errors"><a href="#Some-errors" class="headerlink" title="Some errors"></a>Some errors</h2><p>The first time I ran this, it was fail and showed:</p>
-<pre><code>Couldn&#39;t find an alternative telinit implementation to spawn.
+<pre><code>
+Couldn&#39;t find an alternative telinit implementation to spawn.
+
 </code></pre><p>So I tried running the command again and after some messages, the process was blocked by:</p>
-<pre><code>ruby_block[supervise_redis_sleep] action run
-</code></pre><p>Following <a href="https://www.cnblogs.com/springwind2006/p/6872773.html" target="_blank" rel="noopener">安装GitLab出现ruby_block[supervise_redis_sleep] action run</a>, I tried:</p>
+<pre><code>
+ruby_block[supervise_redis_sleep] action run
+
+</code></pre><p>Following <a href="https://www.cnblogs.com/springwind2006/p/6872773.html" target="_blank" rel="noopener">安装 GitLab 出现 ruby_block[supervise_redis_sleep] action run</a>, I tried:</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> systemctl restart gitlab-runsvdir
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>But failed. It said:</p>

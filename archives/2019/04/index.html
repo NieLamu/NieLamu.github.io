@@ -19,7 +19,7 @@
     <meta name="author" content="NieLamu">
     <meta name="keywords" content="Blog JavaScript Python">
     <meta name="theme-color" content="#00bcd4">
-    <title>NieLamu | Blog</title>
+    <title>Archive ~ NieLamu | Blog</title>
 
     <!-- Material Kit CSS -->
     <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
@@ -144,7 +144,7 @@
                         <div class="row">
                             <div class="col-md-11">
                                 
-                                    <p>2019-02-12&nbsp;&nbsp;<a href="/2019/02/12/Hello-World/" class="h4 title">Hello World</a></p>
+                                    <p>2019-04-16&nbsp;&nbsp;<a href="/2019/04/16/Awesome-GitHub-Repos/" class="h4 title">Awesome GitHub Repos</a></p>
                                  
                             </div>
                         </div>
@@ -155,6 +155,8 @@
                                 <div class="col-md-11">
                                                                     
                                         
+                                            
+                                                <p>2019-04-16&nbsp;&nbsp;<a href="/2019/04/16/Awesome-GitHub-Repos/" class="h4 title">Awesome GitHub Repos</a></p>
                                             
                                         
                                      
@@ -191,8 +193,6 @@
                                 <div class="col-md-11">
                                                                     
                                         
-                                            
-                                                <p>2019-02-12&nbsp;&nbsp;<a href="/2019/02/12/Hello-World/" class="h4 title">Hello World</a></p>
                                             
                                         
                                      
@@ -326,6 +326,31 @@
     $(':root').css('--bgColor', '#00bcd4')
 </script>
 
+
+<script>
+    $(document).ready(function () {
+        const hash = window.location.hash;
+        const pathname = window.location.pathname;
+        if (pathname.includes('archives') && hash) {
+            $('.card-body .tab-pane').each(function () {
+                let ele = $(this);
+                if ('#' + ele.attr('id') === hash) {
+                    ele.addClass('active show');
+                } else {
+                    ele.removeClass('active show');
+                }
+            });
+            $('.card-body .nav-link').each(function () {
+                let ele = $(this);
+                if (ele.attr('href') === hash) {
+                    ele.addClass('active show');
+                } else {
+                    ele.removeClass('active show');
+                }
+            });
+        }
+    })
+</script>
 
 </body>
 

@@ -96,7 +96,7 @@
                 <h1 class="title text-center post_title">Git Commands | Git相关命令</h1>
                 <p class="text-center">
                     Created: <b>2019-03-07</b> |
-                    Updated: <b>2019-04-03</b> |
+                    Updated: <b>2019-04-23</b> |
                     Author: <b>NieLamu</b>
                 </p>
                 <p class="text-center">
@@ -226,10 +226,11 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="Delete-submodule"><a href="#Delete-submodule" class="headerlink" title="Delete submodule"></a>Delete submodule</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">rm</span> -r --cached subRepo
 <span class="token function">rm</span> -rf subRepo
+<span class="token function">rm</span> -rf .git/modules/subRepo
 <span class="token comment" spellcheck="true"># manually delete submodule info in these two files</span>
 vim .gitmodules
 vim .git/config
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># Add tag</span>
 <span class="token function">git</span> tag -a tagName -m tagMessage
 <span class="token comment" spellcheck="true"># List tags</span>
