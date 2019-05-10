@@ -170,6 +170,7 @@ git submodule update
 ```bash
 git rm -r --cached subRepo
 rm -rf subRepo
+rm -rf .git/modules/subRepo
 # manually delete submodule info in these two files
 vim .gitmodules
 vim .git/config

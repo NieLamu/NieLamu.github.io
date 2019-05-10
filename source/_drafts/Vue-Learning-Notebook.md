@@ -77,5 +77,6 @@ Refer:
 [vue根目录下的index.html中的id="app"与src目录下的App.vue中的id="app"为什么不会冲突](https://blog.csdn.net/github_37533433/article/details/78936345)
 [vue-router的两种模式区别以及使用注意事项](https://blog.csdn.net/wang1006008051/article/details/81805932)
 [使用Vue构建Ionic混合APP系列教程](https://blog.csdn.net/liujiawei00/article/details/78843004)
+[Framework7+Framework7-vue+vue踩坑记](https://www.jianshu.com/p/9c0d0702a2aa)
 
 Related:

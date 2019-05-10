@@ -7,8 +7,8 @@
   },
   "scripts": {
     "g": "npx hexo clean && npx hexo g",
-    "d": "sh ./scripts/deploy.sh",
-    "subrepos": "sh ./scripts/subrepos.sh"
+    "d": "sh ./script/deploy.sh",
+    "subrepos": "sh ./script/subrepos.sh"
   },
   "dependencies": {
     "hexo-deployer-git": "^1.0.0",

@@ -48,6 +48,23 @@ gitlab-ctl reconfigure
 gitlab-ctl restart
 ```
 
+## Modify root user password
+
+```bash
+sudo gitlab-rails console production
+In the console:
+# view all users
+User.all
+# select root user
+u=User.where(id:1).first
+# set and confirm password
+u.password='12345678'
+u.password_confirmation='12345678'
+# save and exit
+u.save!
+quit
+```
+
 Visit `http://localhost:9090`, you will be asked to set your password with user name `root`.
 
 ![gitlab-welcome-page](gitlab-welcome-page.png)
@@ -57,16 +74,20 @@ Visit `http://localhost:9090`, you will be asked to set your password with user 
 The first time I ran this, it was fail and showed:
 
 ```
+
 Couldn't find an alternative telinit implementation to spawn.
+
 ```
 
 So I tried running the command again and after some messages, the process was blocked by:
 
 ```
+
 ruby_block[supervise_redis_sleep] action run
+
 ```
 
-Following [安装GitLab出现ruby_block[supervise_redis_sleep] action run](https://www.cnblogs.com/springwind2006/p/6872773.html), I tried:
+Following [安装 GitLab 出现 ruby_block[supervise_redis_sleep] action run](https://www.cnblogs.com/springwind2006/p/6872773.html), I tried:
 
 ```bash
 sudo systemctl restart gitlab-runsvdir
@@ -108,7 +129,7 @@ Everything's quiet.
 Update:
 2019.03.19 Succeed on another Machine.
 
-----
+---
 
 Refer:
 
