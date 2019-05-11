@@ -152,19 +152,8 @@ unicorn<span class="token punctuation">[</span><span class="token string">'port'
 <pre class="line-numbers language-bash"><code class="language-bash">gitlab-ctl reconfigure
 gitlab-ctl restart
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="Modify-root-user-password"><a href="#Modify-root-user-password" class="headerlink" title="Modify root user password"></a>Modify root user password</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> gitlab-rails console production
-<span class="token comment" spellcheck="true"># In the console:</span>
-<span class="token comment" spellcheck="true"># view all users</span>
-User.all
-<span class="token comment" spellcheck="true"># select root user</span>
-u<span class="token operator">=</span>User.where<span class="token punctuation">(</span>id:1<span class="token punctuation">)</span>.first
-<span class="token comment" spellcheck="true"># set and confirm password</span>
-u.password<span class="token operator">=</span><span class="token string">'12345678'</span>
-u.password_confirmation<span class="token operator">=</span><span class="token string">'12345678'</span>
-<span class="token comment" spellcheck="true"># save and exit</span>
-u.save<span class="token operator">!</span>
-quit
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Visit <code>http://localhost:9080</code>, you will be asked to set your password with user name <code>root</code>.</p>
+<p><img src="gitlab-welcome-page.png" alt="gitlab-welcome-page"></p>
 <h2 id="Configure-Email"><a href="#Configure-Email" class="headerlink" title="Configure Email"></a>Configure Email</h2><pre class="line-numbers language-ruby"><code class="language-ruby">gitlab_rails<span class="token punctuation">[</span><span class="token string">'gitlab_email_enabled'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">true</span>
 gitlab_rails<span class="token punctuation">[</span><span class="token string">'gitlab_email_from'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'admin@company.com'</span>
 gitlab_rails<span class="token punctuation">[</span><span class="token string">'gitlab_email_display_name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'admin'</span>
@@ -186,8 +175,19 @@ gitlab-rails console
 <span class="token comment" spellcheck="true"># In the console:</span>
 Notify.test_email<span class="token punctuation">(</span><span class="token string">'user@company.com'</span>, <span class="token string">'Message Subject'</span>, <span class="token string">'Message Body'</span><span class="token punctuation">)</span>.deliver_now
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Visit <code>http://localhost:9080</code>, you will be asked to set your password with user name <code>root</code>.</p>
-<p><img src="gitlab-welcome-page.png" alt="gitlab-welcome-page"></p>
+<h2 id="Modify-root-user-password"><a href="#Modify-root-user-password" class="headerlink" title="Modify root user password"></a>Modify root user password</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> gitlab-rails console production
+<span class="token comment" spellcheck="true"># In the console:</span>
+<span class="token comment" spellcheck="true"># view all users</span>
+User.all
+<span class="token comment" spellcheck="true"># select root user</span>
+u<span class="token operator">=</span>User.where<span class="token punctuation">(</span>id:1<span class="token punctuation">)</span>.first
+<span class="token comment" spellcheck="true"># set and confirm password</span>
+u.password<span class="token operator">=</span><span class="token string">'12345678'</span>
+u.password_confirmation<span class="token operator">=</span><span class="token string">'12345678'</span>
+<span class="token comment" spellcheck="true"># save and exit</span>
+u.save<span class="token operator">!</span>
+quit
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="Some-errors"><a href="#Some-errors" class="headerlink" title="Some errors"></a>Some errors</h2><p>The first time I ran this, it was fail and showed:</p>
 <pre><code>
 Couldn&#39;t find an alternative telinit implementation to spawn.
