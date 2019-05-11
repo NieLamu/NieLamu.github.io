@@ -34,9 +34,9 @@ The edition names of Ubuntu like `bionic` are on [](https://launchpad.net/ubuntu
 
 Setting are in `/etc/gitlab/gitlab.rb`.
 
-```rb
+```ruby
 # Set Url
-external_url 'http://localhost:9090'
+external_url 'http://localhost:9080'
 # Error 502 and 'GitLab is not responding' may be unicorn port occupancy
 unicorn['port'] = 8801
 ```
@@ -52,7 +52,7 @@ gitlab-ctl restart
 
 ```bash
 sudo gitlab-rails console production
-In the console:
+# In the console:
 # view all users
 User.all
 # select root user
@@ -65,7 +65,34 @@ u.save!
 quit
 ```
 
-Visit `http://localhost:9090`, you will be asked to set your password with user name `root`.
+## Configure Email
+
+```ruby
+gitlab_rails['gitlab_email_enabled'] = true
+gitlab_rails['gitlab_email_from'] = 'admin@company.com'
+gitlab_rails['gitlab_email_display_name'] = 'admin'
+gitlab_rails['gitlab_email_reply_to'] = 'admin@company.com'
+gitlab_rails['gitlab_email_subject_suffix'] = 'company'
+
+gitlab_rails['smtp_enable'] = true
+gitlab_rails['smtp_address'] = "smtp.exmail.qq.com"
+# gitlab_rails['smtp_port'] = 465
+gitlab_rails['smtp_user_name'] = "admin@company.com"
+gitlab_rails['smtp_password'] = "password"
+gitlab_rails['smtp_domain'] = "exmail.qq.com"
+gitlab_rails['smtp_authentication'] = "login"
+# gitlab_rails['smtp_enable_starttls_auto'] = true
+# gitlab_rails['smtp_tls'] = false
+```
+
+```bash
+# Test for sending email
+gitlab-rails console
+# In the console:
+Notify.test_email('user@company.com', 'Message Subject', 'Message Body').deliver_now
+```
+
+Visit `http://localhost:9080`, you will be asked to set your password with user name `root`.
 
 ![gitlab-welcome-page](gitlab-welcome-page.png)
 
