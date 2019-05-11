@@ -48,22 +48,9 @@ gitlab-ctl reconfigure
 gitlab-ctl restart
 ```
 
-## Modify root user password
+Visit `http://localhost:9080`, you will be asked to set your password with user name `root`.
 
-```bash
-sudo gitlab-rails console production
-# In the console:
-# view all users
-User.all
-# select root user
-u=User.where(id:1).first
-# set and confirm password
-u.password='12345678'
-u.password_confirmation='12345678'
-# save and exit
-u.save!
-quit
-```
+![gitlab-welcome-page](gitlab-welcome-page.png)
 
 ## Configure Email
 
@@ -92,9 +79,22 @@ gitlab-rails console
 Notify.test_email('user@company.com', 'Message Subject', 'Message Body').deliver_now
 ```
 
-Visit `http://localhost:9080`, you will be asked to set your password with user name `root`.
+## Modify root user password
 
-![gitlab-welcome-page](gitlab-welcome-page.png)
+```bash
+sudo gitlab-rails console production
+# In the console:
+# view all users
+User.all
+# select root user
+u=User.where(id:1).first
+# set and confirm password
+u.password='12345678'
+u.password_confirmation='12345678'
+# save and exit
+u.save!
+quit
+```
 
 ## Some errors
 
