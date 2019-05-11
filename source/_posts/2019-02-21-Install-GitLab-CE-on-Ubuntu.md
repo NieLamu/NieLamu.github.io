@@ -28,7 +28,7 @@ sudo apt-get update
 sudo apt-get install gitlab-ce
 ```
 
-The edition names of Ubuntu like `bionic` are on [](https://launchpad.net/ubuntu).
+The edition names of Ubuntu like `bionic` are on [ubuntu](https://launchpad.net/ubuntu).
 
 ## Modify GitLab configuration settings
 
