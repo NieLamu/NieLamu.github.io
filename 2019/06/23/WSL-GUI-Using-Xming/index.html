@@ -19,7 +19,7 @@
     <meta name="author" content="NieLamu">
     <meta name="keywords" content="Blog JavaScript Python">
     <meta name="theme-color" content="#00bcd4">
-    <title>Awesome GitHub Repos ~ NieLamu | Blog</title>
+    <title>WSL GUI Using Xming ~ NieLamu | Blog</title>
 
     <!-- Material Kit CSS -->
     <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
@@ -93,10 +93,10 @@
     <div class="page-header" data-parallax="false" style="background-color: var(--bgColor); height: 100vh;">
         <div class="page-header-content">
             <div class="container">
-                <h1 class="title text-center post_title">Awesome GitHub Repos</h1>
+                <h1 class="title text-center post_title">WSL GUI Using Xming</h1>
                 <p class="text-center">
-                    Created: <b>2019-04-16</b> |
-                    Updated: <b>2019-04-22</b> |
+                    Created: <b>2019-06-23</b> |
+                    Updated: <b>2019-08-05</b> |
                     Author: <b>NieLamu</b>
                 </p>
                 <p class="text-center">
@@ -126,14 +126,17 @@
             <div class="row">
                 <div class="col-md-8 offset-md-1">
                     <div class="post_content">
-                        <h1 id="Awesome-GitHub-Repos"><a href="#Awesome-GitHub-Repos" class="headerlink" title="Awesome GitHub Repos"></a>Awesome GitHub Repos</h1><h2 id="Mobile-UI-framework-Kit"><a href="#Mobile-UI-framework-Kit" class="headerlink" title="Mobile UI framework/Kit"></a>Mobile UI framework/Kit</h2><ul>
-<li><p><a href="https://github.com/framework7io/framework7/" target="_blank" rel="noopener">framework7</a><br>面对那么多你们 v 你</p>
-<div class="awesome-repos-badge"><img src="https://img.shields.io/github/stars/framework7io/framework7.svg?style=flat-square" alt="GitHub stars"><img src="https://img.shields.io/github/release/framework7io/framework7.svg?style=flat-square" alt="GitHub release"><img src="https://img.shields.io/github/last-commit/framework7io/framework7.svg?style=flat-square" alt="GitHub last commit"></div>
-
-</li>
-</ul>
-<h2 id="Linux-Tools"><a href="#Linux-Tools" class="headerlink" title="Linux Tools"></a>Linux Tools</h2><hr>
-<p>Refer:</p>
+                        <p>Here we start use Xming as Gui on WSL.</p>
+<h2 id="Configuration-on-WSL"><a href="#Configuration-on-WSL" class="headerlink" title="Configuration on WSL"></a>Configuration on WSL</h2><p>Add this line to your <code>.bashrc</code> or <code>.zshrc</code>.</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">export</span> DISPLAY<span class="token operator">=</span>:0
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Install-Xming-on-Windows"><a href="#Install-Xming-on-Windows" class="headerlink" title="Install Xming on Windows"></a>Install Xming on Windows</h2><p>Visit <a href="https://sourceforge.net/projects/xming/" target="_blank" rel="noopener">Xming X Server for Windows</a>, download Xming and install it.</p>
+<p>Open XLaunch and configure it. That <code>Display number</code> must be same with DISPLAY number configuration on WSL, which is <code>0</code> now.</p>
+<p>After this, open Xming and input your command in WSL, the GUI will show.</p>
+<h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><h4 id="Tkinter-error"><a href="#Tkinter-error" class="headerlink" title="Tkinter error"></a>Tkinter error</h4><p>When Python3 script using <code>matplotlib</code> shows error like <code>no module named &quot;tkinter&quot;</code>, you may need run <code>sudo apt-get install python3-tk</code> to solve it.</p>
+<p>#### </p>
+<hr>
+<p>Refer:<br>[1]<a href="https://www.jianshu.com/p/aca81f8c7f08" target="_blank" rel="noopener">Winodws Linux Subsystem（WSL）的安装及GUI图形界面启用</a><br>[2]<a href="https://stackoverflow.com/questions/36327134/matplotlib-error-no-module-named-tkinter" target="_blank" rel="noopener">matplotlib error - no module named tkinter</a></p>
 <p>Related:</p>
 
                     </div>

@@ -19,7 +19,7 @@
     <meta name="author" content="NieLamu">
     <meta name="keywords" content="Blog JavaScript Python">
     <meta name="theme-color" content="#00bcd4">
-    <title>NieLamu | Blog</title>
+    <title>Archive ~ NieLamu | Blog</title>
 
     <!-- Material Kit CSS -->
     <link href="/css/material-kit.min.css?v=2.0.5" rel="stylesheet">
@@ -144,11 +144,7 @@
                         <div class="row">
                             <div class="col-md-11">
                                 
-                                    <p>2019-03-07&nbsp;&nbsp;<a href="/2019/03/07/Git-Commands/" class="h4 title">Git Commands | Git相关命令</a></p>
-                                
-                                    <p>2019-02-15&nbsp;&nbsp;<a href="/2019/02/15/Merge-Two-Branches-From-Two-Git-Projects/" class="h4 title">Merge Two Branches From Two Git Projects</a></p>
-                                
-                                    <p>2019-02-14&nbsp;&nbsp;<a href="/2019/02/14/Permanently-Delete-Files-From-Git-History/" class="h4 title">Permanently Delete Files From Git History</a></p>
+                                    <p>2019-06-23&nbsp;&nbsp;<a href="/2019/06/23/WSL-GUI-Using-Xming/" class="h4 title">WSL GUI Using Xming</a></p>
                                  
                             </div>
                         </div>
@@ -160,13 +156,7 @@
                                                                     
                                         
                                             
-                                        
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
+                                                <p>2019-06-23&nbsp;&nbsp;<a href="/2019/06/23/WSL-GUI-Using-Xming/" class="h4 title">WSL GUI Using Xming</a></p>
                                             
                                         
                                      
@@ -177,14 +167,6 @@
                         <div class="tab-pane" id="Vue">
                             <div class="row">
                                 <div class="col-md-11">
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                                                     
                                         
                                             
@@ -201,14 +183,6 @@
                                         
                                             
                                         
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                      
                                 </div>
                             </div>
@@ -217,14 +191,6 @@
                         <div class="tab-pane" id="Hexo">
                             <div class="row">
                                 <div class="col-md-11">
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                                                     
                                         
                                             
@@ -240,20 +206,6 @@
                                                                     
                                         
                                             
-                                                <p>2019-03-07&nbsp;&nbsp;<a href="/2019/03/07/Git-Commands/" class="h4 title">Git Commands | Git相关命令</a></p>
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                                <p>2019-02-15&nbsp;&nbsp;<a href="/2019/02/15/Merge-Two-Branches-From-Two-Git-Projects/" class="h4 title">Merge Two Branches From Two Git Projects</a></p>
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                                <p>2019-02-14&nbsp;&nbsp;<a href="/2019/02/14/Permanently-Delete-Files-From-Git-History/" class="h4 title">Permanently Delete Files From Git History</a></p>
-                                            
                                         
                                      
                                 </div>
@@ -263,14 +215,6 @@
                         <div class="tab-pane" id="GitHub">
                             <div class="row">
                                 <div class="col-md-11">
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                                                     
                                         
                                             
@@ -287,14 +231,6 @@
                                         
                                             
                                         
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                      
                                 </div>
                             </div>
@@ -303,14 +239,6 @@
                         <div class="tab-pane" id="Electron">
                             <div class="row">
                                 <div class="col-md-11">
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                                                     
                                         
                                             
@@ -327,14 +255,6 @@
                                         
                                             
                                         
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                      
                                 </div>
                             </div>
@@ -347,14 +267,6 @@
                                         
                                             
                                         
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                      
                                 </div>
                             </div>
@@ -363,14 +275,6 @@
                         <div class="tab-pane" id="Web">
                             <div class="row">
                                 <div class="col-md-11">
-                                                                    
-                                        
-                                            
-                                        
-                                                                    
-                                        
-                                            
-                                        
                                                                     
                                         
                                             
@@ -422,6 +326,31 @@
     $(':root').css('--bgColor', '#00bcd4')
 </script>
 
+
+<script>
+    $(document).ready(function () {
+        const hash = window.location.hash;
+        const pathname = window.location.pathname;
+        if (pathname.includes('archives') && hash) {
+            $('.card-body .tab-pane').each(function () {
+                let ele = $(this);
+                if ('#' + ele.attr('id') === hash) {
+                    ele.addClass('active show');
+                } else {
+                    ele.removeClass('active show');
+                }
+            });
+            $('.card-body .nav-link').each(function () {
+                let ele = $(this);
+                if (ele.attr('href') === hash) {
+                    ele.addClass('active show');
+                } else {
+                    ele.removeClass('active show');
+                }
+            });
+        }
+    })
+</script>
 
 </body>
 
