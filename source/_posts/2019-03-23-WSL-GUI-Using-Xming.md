@@ -4,7 +4,7 @@ categories:
   - Programming
 tags:
   - Programming
-date: 2019-03-23 15:02:54
+date: 2019-06-23 15:02:54
 ---
 
 Here we start use Xming as Gui on WSL.

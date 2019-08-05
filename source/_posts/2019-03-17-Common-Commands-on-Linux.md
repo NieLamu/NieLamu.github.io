@@ -5,7 +5,7 @@ categories:
 tags:
   - Linux
   - Ubuntu
-date: 2019-03-17 00:31:55
+date: 2019-05-17 00:31:55
 banner_img: /img/Linux-Tux-Logo-HD-Wallpaper.jpg
 ---
 
@@ -33,16 +33,17 @@ tail -f /var/log/cron
 
 Command format:
 
-| 字段 | *    | *    | *    | *    | *             | Command |
-|----|------|------|------|------|---------------|---------|
-| 含义 | 分钟   | 小时   | 天    | 月    | 星期            | 任务命令    |
-| 范围 | 0~59 | 0~23 | 1~31 | 1~12 | 0～7（0和7表示星期天） |         |
+| 字段 | \*   | \*   | \*   | \*   | \*                          | Command  |
+| ---- | ---- | ---- | ---- | ---- | --------------------------- | -------- |
+| 含义 | 分钟 | 小时 | 天   | 月   | 星期                        | 任务命令 |
+| 范围 | 0~59 | 0~23 | 1~31 | 1~12 | 0 ～ 7（0 和 7 表示星期天） |          |
 
 Characters meaning:
-* \* all values
-* , and 
-* \- from to
-* / interval
+
+- \* all values
+- , and
+- \- from to
+- / interval
 
 ## SSH
 
@@ -68,5 +69,5 @@ PasswordAuthentication yes # Allow password login
 Go to `Settings-Applications and Functions-Manage optional features`, and click on the `Add a feature` button, then install `OpenSSH Server`. After the installation, two new Windows services called sshd and sshd-agent will have been created, you can manually start them and set their startup type to `automatic`.
 
 Refer:
-[1][Linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
-[2][How to Install the Built-In Windows 10 OpenSSH Server](https://www.bleepingcomputer.com/news/microsoft/how-to-install-the-built-in-windows-10-openssh-server/)
+[1][linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
+[2][how to install the built-in windows 10 openssh server](https://www.bleepingcomputer.com/news/microsoft/how-to-install-the-built-in-windows-10-openssh-server/)
