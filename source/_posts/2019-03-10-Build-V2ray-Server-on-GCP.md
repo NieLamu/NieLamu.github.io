@@ -76,7 +76,7 @@ We have  recently detected that your Google Cloud Project XXX has been performin
 
 ## 部署和配置V2ray
 
-[V2ray官网](https://www.V2Ray.com/)的文档比较详细，但对初次部署来说略显复杂。可以先按照[V2Ray 白话文教程](https://toutyrater.github.io/)来操作。
+[V2ray官网](https://www.V2Ray.com/)的文档比较详细，但对初次部署和配置来说略显复杂且难懂。可以按照[官网文档](https://www.v2ray.com/chapter_00/install.html)来安装，再按照[V2Ray 白话文教程](https://toutyrater.github.io/)来配置。
 
 ### 下载安装
 
@@ -84,11 +84,11 @@ We have  recently detected that your Google Cloud Project XXX has been performin
 
 ```bash
 # 官方脚本安装
-sudo bash <(curl -L -s https://install.direct/go.sh)
+bash <(curl -L -s https://install.direct/go.sh)
 # 启动
-sudo systemctl start v2ray
+service v2ray start
 # 更新
-sudo bash go.sh
+bash go.sh
 ```
 
 #### Windows
@@ -102,6 +102,7 @@ sudo bash go.sh
 #### 服务端
 
 ```json
+// etc/v2ray/config.json
 {
   "inbounds": [{
       "port": 2019, // V2Ray配置json文件支持注释
@@ -130,6 +131,7 @@ sudo bash go.sh
 #### 客户端
 
 ```json
+// config.json
 {
   "outbounds": [
     {
