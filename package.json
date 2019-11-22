@@ -6,8 +6,8 @@
     "version": "3.8.0"
   },
   "scripts": {
-    "g": "npx hexo clean && npx hexo g",
-    "d": "sh ./script/deploy.sh",
+    "generate": "npx hexo clean && npx hexo g",
+    "deploy": "sh ./script/deploy.sh",
     "subrepos": "sh ./script/subrepos.sh"
   },
   "dependencies": {

@@ -7,13 +7,13 @@
 # Generate
 npx hexo clean && npx hexo g
 # or
-npm run g
+npm run generate
+
 # Serve
 npx hexo s --draft
+
 # Deploy
 npx hexo d -m ""
 # or
-./d.sh ""
-# or
-npm run d ""
+npm run deploy ""
 ```
