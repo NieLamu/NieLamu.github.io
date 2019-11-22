@@ -50,7 +50,7 @@
 }
 
 .post_banner_img:hover {
-  box-shadow: 0rem 0rem 2rem var(--bgColor);
+  box-shadow: 0rem 0rem 1.5rem var(--bgColor);
 }
 
 .post_content {
@@ -72,7 +72,7 @@
   display: block;
 }
 .post_content img:hover {
-  box-shadow: 0rem 0rem 2rem var(--bgColor);
+  box-shadow: 0rem 0rem 1.5rem var(--bgColor);
 }
 
 .post_content h1,
@@ -104,8 +104,7 @@ h3:hover:before,
 h4:hover:before,
 h5:hover:before,
 h6:hover:before {
-  margin-right: 6px;
-  content: "✗";
+  content: "✈";
 }
 
 .post_content .awesome-repos-badge img {

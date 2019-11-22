@@ -33,6 +33,21 @@ body, h1, h2, h3, h4, h5, h6, .title {
     }
 }
 
+/* 滚动条 */
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  background: var(--bgColor);
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  background   : #ededed;
+}
+
 /* 导航栏 */
 .navbar {
 	padding: 0;
@@ -141,7 +156,7 @@ ion-icon {
     border-radius: .375rem;
 }
 .index-card:hover {
-	box-shadow: 0rem 0rem 2rem var(--bgColor);
+	box-shadow: 0rem 0rem 1.5rem var(--bgColor);
 	transition: 0.3s;
 }
 
