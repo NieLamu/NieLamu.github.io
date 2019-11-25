@@ -60,12 +60,12 @@
 
 .post_content p {
   font-size: 1rem;
-  font-weight: 400;
+  transition: all 1s ease-out;
 }
 
 .post_content img {
   cursor: zoom-in;
-  transition: 0.3s;
+  transition: all 1s ease-out;
   border-radius: 0.375rem;
   max-width: 100%;
   margin: 1.5rem auto;
@@ -166,9 +166,7 @@ h6:hover:before {
 }
 
 /* 图片放大 */
-#fullImgBackground {
-  --scale: 1;
-  --origin: 50% 50%;
+.bigImage {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -180,21 +178,17 @@ h6:hover:before {
   justify-content: center;
   align-items: center;
 }
-#fullImgBackground img {
+.bigImage img {
   max-width: 100%;
   max-height: 100%;
-  z-index: 2;
-  border-radius: 0.3125rem;
-  transition: all 0.3s;
   cursor: zoom-out;
-  transform: scale(1);
 }
-.disableScroll {
+/* .disableScroll {
   overflow: hidden;
 }
 .barHidden {
   z-index: 0;
-}
+} */
 
 /* 表格 */
 table {

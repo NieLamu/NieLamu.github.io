@@ -39,59 +39,62 @@ $(document).ready(function () {
         collapsibleClass: 'tocbot-is-collapsible',
         scrollSmooth: true,
     });
-}) 
+})
 
 
 // 全屏大图效果
-$(document).ready(()=> {
+$(document).ready(() => {
 
     const body = $('body');
     const navbar = $('.navbar');
     const post_content_img = $('.post_content img');
     post_content_img.on('click', function (e) {
-        body.append(
-            `<div id='fullImgBackground' onselectstart="return false;">`
-            + `<img src='${e.target.src}'>`
-            + `</div>`
-        );
-        body.addClass('disableScroll');
-        navbar.addClass('barHidden');
+        let imgEle = $(e.target)
+        let pEle = imgEle.parents("p")
+        pEle.addClass('bigImage')
+        // body.append(
+        //     `<div id='fullImgBackground' onselectstart="return false;">`
+        //     + `<img src='${e.target.src}'>`
+        //     + `</div>`
+        // );
+        // body.addClass('disableScroll');
+        // navbar.addClass('barHidden');
 
-        let bgClicked = {
-            num: 0,
-            timer: null,
-            scale: 1
-        };
-        const fullImgBackground = $('#fullImgBackground');
-        const fullImgBackground_img = $('#fullImgBackground img');
-        // fullImgBackground.onselectstart = function () { return false; };
-        fullImgBackground.on('click', function (e) {
-            if (!!bgClicked.timer) {
-                clearTimeout(bgClicked.timer);
-                bgClicked.timer = null;
-            }
-            bgClicked.num ++;
-            if (bgClicked.num === 2) {
-                bgClicked.num = 0;
-                bgClicked.scale = parseInt(bgClicked.scale * 10) === (1 + 0.5*2)*10? 1:bgClicked.scale+0.5;
-                fullImgBackground_img.css('transform', `scale(${bgClicked.scale})`)
-            } else {
-                bgClicked.timer = setTimeout(() => {
-                    fullImgBackground.remove();
-                    body.removeClass('disableScroll');
-                    navbar.removeClass('barHidden');
-                }, 250)
-            }
-        });
-        fullImgBackground_img.one('click', function (e) {
+        // let bgClicked = {
+        //     num: 0,
+        //     timer: null,
+        //     scale: 1
+        // };
+        // const fullImgBackground = $('#fullImgBackground');
+        // const fullImgBackground_img = $('#fullImgBackground img');
+        // // fullImgBackground.onselectstart = function () { return false; };
+        // fullImgBackground.on('click', function (e) {
+        //     if (!!bgClicked.timer) {
+        //         clearTimeout(bgClicked.timer);
+        //         bgClicked.timer = null;
+        //     }
+        //     bgClicked.num ++;
+        //     if (bgClicked.num === 2) {
+        //         bgClicked.num = 0;
+        //         bgClicked.scale = parseInt(bgClicked.scale * 10) === (1 + 0.5*2)*10? 1:bgClicked.scale+0.5;
+        //         fullImgBackground_img.css('transform', `scale(${bgClicked.scale})`)
+        //     } else {
+        //         bgClicked.timer = setTimeout(() => {
+        //             fullImgBackground.remove();
+        //             body.removeClass('disableScroll');
+        //             navbar.removeClass('barHidden');
+        //         }, 250)
+        //     }
+        // });
+        // fullImgBackground_img.one('click', function (e) {
 
-        });
+        // });
     });
 })
 
 
 // heading点击滚动效果
-$(document).ready(()=> {
+$(document).ready(() => {
     $('.post_content h1,h2,h3,h4,h5,h6').click((e) => {
         $('html,body').animate({ scrollTop: $(`#${e.target.id}`).offset().top }, 500);
     });
@@ -124,7 +127,7 @@ $(document).ready(() => {
         } catch {
             return;
         }
-        let pixels = {r: 0, g: 0, b: 0, a: 0, index: 0};
+        let pixels = { r: 0, g: 0, b: 0, a: 0, index: 0 };
         const len = data.length;
         for (let i = 0, offset, r, g, b, a; i < len / 4; i++) {
             offset = i * 4;
