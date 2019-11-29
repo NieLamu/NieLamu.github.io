@@ -48,48 +48,8 @@ $(document).ready(() => {
     const body = $('body');
     const navbar = $('.navbar');
     const post_content_img = $('.post_content img');
-    post_content_img.on('click', function (e) {
-        let imgEle = $(e.target)
-        let pEle = imgEle.parents("p")
-        pEle.addClass('bigImage')
-        // body.append(
-        //     `<div id='fullImgBackground' onselectstart="return false;">`
-        //     + `<img src='${e.target.src}'>`
-        //     + `</div>`
-        // );
-        // body.addClass('disableScroll');
-        // navbar.addClass('barHidden');
-
-        // let bgClicked = {
-        //     num: 0,
-        //     timer: null,
-        //     scale: 1
-        // };
-        // const fullImgBackground = $('#fullImgBackground');
-        // const fullImgBackground_img = $('#fullImgBackground img');
-        // // fullImgBackground.onselectstart = function () { return false; };
-        // fullImgBackground.on('click', function (e) {
-        //     if (!!bgClicked.timer) {
-        //         clearTimeout(bgClicked.timer);
-        //         bgClicked.timer = null;
-        //     }
-        //     bgClicked.num ++;
-        //     if (bgClicked.num === 2) {
-        //         bgClicked.num = 0;
-        //         bgClicked.scale = parseInt(bgClicked.scale * 10) === (1 + 0.5*2)*10? 1:bgClicked.scale+0.5;
-        //         fullImgBackground_img.css('transform', `scale(${bgClicked.scale})`)
-        //     } else {
-        //         bgClicked.timer = setTimeout(() => {
-        //             fullImgBackground.remove();
-        //             body.removeClass('disableScroll');
-        //             navbar.removeClass('barHidden');
-        //         }, 250)
-        //     }
-        // });
-        // fullImgBackground_img.one('click', function (e) {
-
-        // });
-    });
+    post_content_img.addClass('materialboxed')
+    post_content_img.materialbox();
 })
 
 
