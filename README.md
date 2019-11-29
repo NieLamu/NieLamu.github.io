@@ -13,7 +13,7 @@ npm run generate
 npx hexo s --draft
 
 # Deploy
-npx hexo d -m ""
+npx hexo d -m "message"
 # or
-npm run deploy ""
+npm run deploy "message"
 ```
