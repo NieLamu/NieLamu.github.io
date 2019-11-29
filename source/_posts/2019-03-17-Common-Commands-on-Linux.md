@@ -45,6 +45,13 @@ Characters meaning:
 - \- from to
 - / interval
 
+## About file
+
+```bash
+# copy file but exclude some files, add '-n' to find all files will be influenced
+rsync -av --progress srcName destName --exclude 'yourRegex'
+```
+
 ## SSH
 
 ### Installation and configuration
