@@ -75,6 +75,13 @@ PasswordAuthentication yes # Allow password login
 
 Go to `Settings-Applications and Functions-Manage optional features`, and click on the `Add a feature` button, then install `OpenSSH Server`. After the installation, two new Windows services called sshd and sshd-agent will have been created, you can manually start them and set their startup type to `automatic`.
 
+## Upload or download file using scp
+
+```bash
+scp -r username@192.168.0.1:/home/username/remotefile.txt
+scp -r localfile.txt username@192.168.0.1:/home/username/
+```
+
 Refer:
 [1][linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 [2][how to install the built-in windows 10 openssh server](https://www.bleepingcomputer.com/news/microsoft/how-to-install-the-built-in-windows-10-openssh-server/)
